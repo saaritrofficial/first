@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer id="contact" className="bg-charcoal border-t border-border">
-      {/* Newsletter Section */}
+      {/* Newsletter Section
       <div className="border-b border-border">
         <div className="container mx-auto px-6 py-16">
           <div className="max-w-xl mx-auto text-center">
@@ -31,7 +31,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-16">
@@ -101,8 +101,6 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  mumbai
-                  <br />
                   India
                 </span>
               </li>
@@ -125,15 +123,15 @@ const Footer = () => {
                   info@saaritr.in
                 </a>
               </li>
-              {/* <li className="flex items-center gap-3">
+              {<li className="flex items-center gap-3">
                 <Instagram size={18} className="text-primary" />
                 <a
-                  href="Saar_Itr"
+                  href="https://www.instagram.com/saar_itr/"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   Saar_Itr
                 </a>
-              </li> */}
+              </li> }
             </ul>
           </div>
         </div>

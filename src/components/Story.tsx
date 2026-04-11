@@ -1,25 +1,25 @@
 import { Sparkles, Leaf, Heart } from "lucide-react";
 
-const features = [
-  {
-    icon: Sparkles,
-    title: "Ancient Artistry",
-    description:
-      "Our perfumers carry forward centuries-old traditions, using time-honored distillation methods to capture the purest essence of each ingredient.",
-  },
-  {
-    icon: Leaf,
-    title: "Natural Ingredients",
-    description:
-      "We source only the finest natural materials from trusted suppliers around the world, ensuring authenticity and sustainability in every bottle.",
-  },
-  {
-    icon: Heart,
-    title: "Handcrafted with Love",
-    description:
-      "Each fragrance is meticulously blended by hand, allowing our master perfumers to create compositions that resonate with the soul.",
-  },
-];
+ const features = [
+//    {
+//    icon: Sparkles,
+//     title: "Ancient Artistry",
+//     description:
+//      "Our perfumers carry forward centuries-old traditions, using time-honored distillation methods to capture the purest essence of each ingredient.",
+//  },
+//  {
+//    icon: Leaf,
+//    title: "Natural Ingredients",
+//    description:
+//     "We source only the finest natural materials from trusted suppliers around the world, ensuring authenticity and sustainability in every bottle.",
+//  },
+//    {
+//      icon: Heart,
+//      title: "Handcrafted with Love",
+//      description:
+//             "Each fragrance is meticulously blended by hand, allowing our master perfumers to create compositions that resonate with the soul.",
+//    },
+ ];
 
 const Story = () => {
   return (
@@ -42,10 +42,22 @@ const Story = () => {
             Our Story
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-            SAAR itr was born from a passion to preserve the ancient art of
-            natural perfumery. Our name, derived from the Sanskrit word for
-            "essence," reflects our commitment to capturing the true spirit of
-            each ingredient.
+          SAAR was created with a simple belief — fragrance should feel personal, powerful, and rooted in identity.
+
+<br></br>Inspired by India's rich perfumery heritage, especially the timeless traditions of Kannauj, SAAR blends cultural depth with modern refinement.
+Our fragrances are thoughtfully curated to suit Indian preferences, climate, and lifestyle — offering long-lasting performance with a premium feel.
+
+<br></br>We don't just create perfumes. We create presence.
+
+<br></br>In a world of fast trends and fleeting impressions, SAAR was born to bring back depth and meaning to fragrance.
+
+India has a long-standing legacy of perfumery, where scent has always been more than just a luxury — it has been a part of culture, rituals, and identity.
+
+<br></br>In the historic city of Kannauj, this craft has been refined over generations, preserving the art of creating fragrances that linger not just on the skin, but in memory.
+
+<br></br>SAAR draws inspiration from this heritage and reimagines it for today — creating fragrances that are modern in expression, yet rooted in tradition.
+
+
           </p>
         </div>
 

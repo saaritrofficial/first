@@ -14,9 +14,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "Home", href: "#home" },
     { name: "Collections", href: "#collections" },
     { name: "Our Story", href: "#story" },
-    { name: "Ingredients", href: "#ingredients" },
+    //{ name: "Ingredients", href: "#ingredients" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -53,13 +54,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="btn-outline-luxury px-6 py-2 text-sm tracking-wider uppercase">
-              Shop Now
-            </button>
-          </div>
-
+          
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-foreground"

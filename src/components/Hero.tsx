@@ -41,24 +41,11 @@ const Hero = () => {
             className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto mb-12 font-light tracking-wide animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Where ancient traditions meet modern artistry. Each fragrance is a
-            journey through time, crafted with the finest natural essences.
+            SAAR is a contemporary fragrance brand inspired by the depth and richness of Indian perfumery traditions.
           </p>
 
-          {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <button className="btn-luxury px-10 py-4 text-sm tracking-widest uppercase font-medium relative z-10">
-              <span className="relative z-10">Discover Collection</span>
-            </button>
-            <button className="btn-outline-luxury px-10 py-4 text-sm tracking-widest uppercase font-medium">
-              Our Story
-            </button>
           </div>
-        </div>
-      </div>
+          </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
