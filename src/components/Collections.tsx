@@ -1,24 +1,48 @@
 import perfumeOud from "@/assets/perfume-oud.jpg";
 import perfumeFloral from "@/assets/perfume-floral.jpg";
 import perfumeWoody from "@/assets/perfume-woody.jpg";
+import saarColdRush from "@/assets/Cold_Rush_image.jpg";
+import saarAmberDrift from "@/assets/Amber_Drift_image.jpg";
+import saarAquaImage from "@/assets/Aqua_Aura_image.jpg";
 
 const collections = [
   {
     id: 1,
+    name: "Cold Rush",
+    description: "Cold and Rush",
+    image: saarColdRush,
+    price: "₹4,200",
+  },
+  {
+    id: 2,
+    name: "Amber Drift",
+    description: "Amber Drift",
+    image: saarAmberDrift,
+    price: "₹4,800",
+  },
+  {
+    id: 3,
+    name: "Aqua",
+    description: "Aqua",
+    image: saarAquaImage,
+    price: "₹5,200",
+  },
+  {
+    id: 4,
     name: "Royal Oud",
     description: "Rich, smoky, and deeply sensual",
     image: perfumeOud,
     price: "₹4,500",
   },
   {
-    id: 2,
+    id: 5,
     name: "Rose & Jasmine",
     description: "Delicate florals with warm undertones",
     image: perfumeFloral,
     price: "₹3,800",
   },
   {
-    id: 3,
+    id: 6,
     name: "Sandalwood Cedar",
     description: "Earthy, grounding, and timeless",
     image: perfumeWoody,

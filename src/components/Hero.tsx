@@ -1,4 +1,5 @@
-import heroImage from "@/assets/hero-perfume.jpg";
+import heroImage from "@/assets/saar_main.jpeg";
+
 import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
