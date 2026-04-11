@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail,MapPin , Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -58,7 +58,7 @@ const Footer = () => {
               Explore
             </h4>
             <ul className="space-y-3">
-              {["Collections", "Our Story", "Ingredients", "Gifting"].map(
+              {["Home", "Collections", "Our Story", "Contact"].map(
                 (link) => (
                   <li key={link}>
                     <a
@@ -101,7 +101,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  Mumbai, Maharashtra
+                  mumbai
                   <br />
                   India
                 </span>
@@ -109,21 +109,31 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary" />
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+919625663589"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  +91 123 456 7890
+                  +91 9625663589
+                  <br></br>+91 9336248022
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary" />
                 <a
-                  href="mailto:hello@saaritr.com"
+                  href="mailto:info@saaritr.in"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  hello@saaritr.com
+                  info@saaritr.in
                 </a>
               </li>
+              {/* <li className="flex items-center gap-3">
+                <Instagram size={18} className="text-primary" />
+                <a
+                  href="Saar_Itr"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  Saar_Itr
+                </a>
+              </li> */}
             </ul>
           </div>
         </div>

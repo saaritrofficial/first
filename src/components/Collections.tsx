@@ -1,52 +1,86 @@
-import perfumeOud from "@/assets/perfume-oud.jpg";
-import perfumeFloral from "@/assets/perfume-floral.jpg";
-import perfumeWoody from "@/assets/perfume-woody.jpg";
-import saarColdRush from "@/assets/Cold_Rush_image.jpg";
+
+import saarBlueedge from "@/assets/Blue_Edge_image.jpg";
 import saarAmberDrift from "@/assets/Amber_Drift_image.jpg";
 import saarAquaImage from "@/assets/Aqua_Aura_image.jpg";
+import saarColdRush from "@/assets/Cold_Rush_image.jpg";
+import saarStoneedge from "@/assets/Stone_edge_image.jpg";
+import saarFlore from "@/assets/Flore_Essence_image.jpg";
+import saarGoldenaura from "@/assets/Golden_Aura_image.jpg";
+import saarKingmyst from "@/assets/King_Mystique_image.jpg";
+import saarOudeternal from "@/assets/Oud_Eternal_image.jpg";
+import saarPulse from "@/assets/Pluse-X_image.jpg";
 
 const collections = [
   {
     id: 1,
-    name: "Cold Rush",
-    description: "Cold and Rush",
-    image: saarColdRush,
+    name: "Blue Edge : Edge of Elegance ",
+    description: "Fresh, Wram and Woody",
+    image: saarBlueedge,
     price: "₹4,200",
   },
   {
-    id: 2,
-    name: "Amber Drift",
-    description: "Amber Drift",
-    image: saarAmberDrift,
-    price: "₹4,800",
-  },
-  {
-    id: 3,
-    name: "Aqua",
-    description: "Aqua",
+    id: 6,
+    name: "Aqua Aura : Dive into Serenity",
+    description: "Fresh, Floral and  Musky",
     image: saarAquaImage,
     price: "₹5,200",
   },
   {
+    id: 2,
+    name: "Golden Aura : Glow of Success",
+    description: "Fruity, Spicy and Woody",
+    image: saarGoldenaura,
+    price: "₹4,200",
+  },
+  {
+    id: 3,
+    name: "Oud Eternal",
+    description: "Fruity, Floral and Musky : An oud that lingers beyond memory.",
+    image: saarOudeternal,
+    price: "₹5,200",
+  }, 
+  {
+    id: 7,
+    name: "Cold Rush",
+    description: "Citrus, Spicy and Woody : Stay Sharp. Stay Cool",
+    image: saarColdRush,
+    price: "₹4,200",
+  },
+  {
     id: 4,
-    name: "Royal Oud",
-    description: "Rich, smoky, and deeply sensual",
-    image: perfumeOud,
-    price: "₹4,500",
+    name: "Pulse-X",
+    description: "Green, Floral and Musky : Power isn't given. It's felt",
+    image: saarPulse,
+    price: "₹5,200",
   },
   {
     id: 5,
-    name: "Rose & Jasmine",
-    description: "Delicate florals with warm undertones",
-    image: perfumeFloral,
-    price: "₹3,800",
+    name: "Amber Drift : Drift into Desire",
+    description: "Warm, Goumand and Amberwood : Let the warmth take over",
+    image: saarAmberDrift,
+    price: "₹4,800",
+  },
+
+  {
+    id: 8,
+    name: "Stone Edge : Carved for Greatness",
+    description: "Aquatic, Aromatic and Amber : Built to last. Designed to lead",
+    image: saarStoneedge,
+    price: "₹4,200",
   },
   {
-    id: 6,
-    name: "Sandalwood Cedar",
-    description: "Earthy, grounding, and timeless",
-    image: perfumeWoody,
-    price: "₹4,200",
+    id: 9,
+    name: "King Mystique : An Aura Beyond Power",
+    description: "Green, Floral and Earthy : Power doesn't speak it lingers",
+    image: saarKingmyst,
+    price: "₹4,800",
+  },
+  {
+    id: 10,
+    name: "Florė Essence",
+    description: "Citrus, Floral and Woody",
+    image: saarFlore,
+    price: "₹5,200",
   },
 ];
 
@@ -67,8 +101,9 @@ const Collections = () => {
             Our Collections
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Each fragrance tells a story, handcrafted using traditional methods
-            passed down through generations.
+          One collection. Infinite expressions.
+          Crafted for every mood, every moment 
+          <br></br>Saar defines your presence with every scent.
           </p>
         </div>
 
@@ -101,12 +136,12 @@ const Collections = () => {
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-primary font-medium">
+                    {/* <span className="text-primary font-medium">
                       {product.price}
-                    </span>
-                    <button className="btn-outline-luxury px-4 py-2 text-xs tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </span> */}
+                    {/* <button className="btn-outline-luxury px-4 py-2 text-xs tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
 
@@ -119,9 +154,9 @@ const Collections = () => {
 
         {/* View All Button */}
         <div className="text-center mt-16">
-          <button className="btn-luxury px-12 py-4 text-sm tracking-widest uppercase font-medium relative z-10">
+          {/* <button className="btn-luxury px-12 py-4 text-sm tracking-widest uppercase font-medium relative z-10">
             <span className="relative z-10">View All Collections</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
