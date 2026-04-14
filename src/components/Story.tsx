@@ -20,10 +20,21 @@ import { Sparkles, Leaf, Heart } from "lucide-react";
 //             "Each fragrance is meticulously blended by hand, allowing our master perfumers to create compositions that resonate with the soul.",
 //    },
  ];
-
+ import ourstory from "@/assets/ourstory3.avif";
 const Story = () => {
   return (
+
     <section id="story" className="py-24 bg-card relative overflow-hidden">
+       {/* Background Image */}
+       <div className="absolute inset-0">
+        <img
+          src={ourstory}
+         // alt="Luxury perfume bottles"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/80" />
+      </div>
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -89,7 +100,7 @@ India has a long-standing legacy of perfumery, where scent has always been more 
             journey that lingers long after the moment has passed."
           </blockquote>
           <cite className="block mt-6 text-primary tracking-widest text-sm uppercase not-italic">
-            — The House of SAAR
+            — SAAR : House of Fragrance
           </cite>
         </div>
       </div>
