@@ -22,7 +22,7 @@ const collections = [
     baseNode: "Woody, Sandalwood, Amber",
     image: saarBlueedge,
     price: "₹1,549",
-    launchPrice: "₹1,000",
+    launchPrice: "₹999",
     premium: "yes"
   },
   {
@@ -34,7 +34,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarAquaImage,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarGoldenaura,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarOudeternal,
     price: "₹1,549",
-    launchPrice: "₹1,000",
+    launchPrice: "₹999",
     premium: "yes"
   }, 
   {
@@ -68,7 +68,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarColdRush,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
   {
     id: 4,
@@ -79,7 +79,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarPulse,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
   {
     id: 5,
@@ -90,7 +90,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarAmberDrift,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
 
   {
@@ -102,7 +102,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarStoneedge,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
   {
     id: 9,
@@ -113,7 +113,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarKingmyst,
     price: "₹1,549",
-    launchPrice: "₹1,000",
+    launchPrice: "₹999",
     premium: "yes"
   },
   {
@@ -125,7 +125,7 @@ const collections = [
     baseNode: "Musky, Cedar",
     image: saarFlore,
     price: "₹1,449",
-    launchPrice: "₹900",
+    launchPrice: "₹899",
   },
 ];
 
