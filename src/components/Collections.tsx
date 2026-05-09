@@ -9,14 +9,21 @@ import saarGoldenaura from "@/assets/Golden_Aura_image.jpg";
 import saarKingmyst from "@/assets/King_Mystique_image.jpg";
 import saarOudeternal from "@/assets/Oud_Eternal_image.jpg";
 import saarPulse from "@/assets/Pluse-X_image.jpg";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const collections = [
   {
     id: 1,
     name: "Blue Edge",
     description: "Fresh, Wram and Woody",
+    topNode: "Citrus ",
+    middleNode: "Rose, Jasmine",
+    baseNode: "Sandalwood",
     image: saarBlueedge,
     price: "₹4,200",
+    launchPrice: "₹3,200",
+    premium: "yes"
   },
   {
     id: 6,
@@ -112,12 +119,20 @@ const Collections = () => {
           {collections.map((product, index) => (
             <div
               key={product.id}
-              className="group relative animate-fade-up"
+              // className="group relative animate-fade-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="relative overflow-hidden bg-card rounded-sm">
+
                 {/* Image Container */}
-                <div className="aspect-square overflow-hidden">
+                <div className="group relative aspect-square overflow-hidden">
+                {product.premium && (
+                  <div className="absolute top-0 left-0 z-20 w-32 h-32 overflow-hidden pointer-events-none">
+                    <div className="absolute top-[22px] left-[-34px] w-[160px] rotate-[-45deg] bg-yellow-500 text-black text-sm font-black py-1.5 shadow-md text-center uppercase tracking-wider">
+                      Premium
+                    </div>
+                  </div>
+                )}
                   <img
                     src={product.image}
                     alt={product.name}
@@ -130,11 +145,55 @@ const Collections = () => {
                 {/* Content */}
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-foreground mb-2">
-                    {product.name}
+                    {product.name} 
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {product.description}
                   </p>
+                  <p className="text-base font-medium mb-4">
+                    <li> Top Node: {product.topNode} </li>
+                    <li> Middle Node: {product.middleNode} </li>
+                    <li> Base Node: {product.baseNode} </li>
+                  </p>
+
+                  <p className="text-xl font-medium mb-4 flex items-center gap-2">
+                  <span className="text-base font-normal">Price for 60ml:</span>
+
+                    {/* Original Price */}
+                    {product.launchPrice ? (
+    <>
+                      {/* Show both if launchPrice exists */}
+                      <span className="line-through decoration-red-500 text-red-500">
+                        {product.price}
+                      </span>
+                      <span className="text-green-500 inline-flex items-center gap-1">
+                        {product.launchPrice}
+                      </span>
+                    </>
+                  ) : (
+                    /* Show only regular price if launchPrice doesn't exist */
+                    <span>{product.price}</span>
+                  )}
+                      <span className="text-green-500 inline-flex items-center gap-1">
+
+                      <a
+                        // href={`https://wa.me/919422554485?text="Hi"`}
+
+                       href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in ${product.name}. What quantity can I opt for ?`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center hover:scale-110 transition-transform cursor-pointer"
+                        >
+                        <FaWhatsapp className="text-[#25D366] text-2xl" /> 
+
+                        </a>
+                    </span>
+                  </p>
+                  {/* <p className="text-xl font-medium mb-4">
+                    <span className="line-through decoration-red-500 text-red-500">{product.price}</span>
+                    <span> </span>
+                    <span className ="text-green-500">{product.launchPrice}</span>
+                  </p> */}
                   <div className="flex items-center justify-between">
                     {/* <span className="text-primary font-medium">
                       {product.price}
