@@ -16,78 +16,116 @@ const collections = [
   {
     id: 1,
     name: "Blue Edge",
-    description: "Fresh, Wram and Woody",
-    topNode: "Citrus ",
-    middleNode: "Rose, Jasmine",
-    baseNode: "Sandalwood",
+    description: "Fresh, Warm and Woody",
+    topNode: "Lemon, Mint, Grapefruit ",
+    middleNode: "Ginger, Jasmine",
+    baseNode: "Woody, Sandalwood, Amber",
     image: saarBlueedge,
-    price: "₹4,200",
-    launchPrice: "₹3,200",
+    price: "₹1,549",
+    launchPrice: "₹1,000",
     premium: "yes"
   },
   {
     id: 6,
     name: "Aqua Aura",
     description: "Fresh, Floral and  Musky",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarAquaImage,
-    price: "₹5,200",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
   {
     id: 2,
     name: "Golden Aura",
     description: "Fruity, Spicy and Woody",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarGoldenaura,
-    price: "₹4,200",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
   {
     id: 3,
     name: "Oud Eternal",
     description: "Fruity, Floral and Musky",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarOudeternal,
-    price: "₹5,200",
+    price: "₹1,549",
+    launchPrice: "₹1,000",
+    premium: "yes"
   }, 
   {
     id: 7,
     name: "Cold Rush",
     description: "Citrus, Spicy and Woody",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarColdRush,
-    price: "₹4,200",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
   {
     id: 4,
     name: "Pulse-X",
     description: "Green, Floral and Musky",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarPulse,
-    price: "₹5,200",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
   {
     id: 5,
     name: "Amber Drift",
     description: "Warm, Goumand and Amberwood",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarAmberDrift,
-    price: "₹4,800",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
 
   {
     id: 8,
     name: "Stone Edge",
     description: "Aquatic, Aromatic and Amber",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarStoneedge,
-    price: "₹4,200",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
   {
     id: 9,
     name: "King Mystique",
     description: "Green, Floral and Earthy",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarKingmyst,
-    price: "₹4,800",
+    price: "₹1,549",
+    launchPrice: "₹1,000",
+    premium: "yes"
   },
   {
     id: 10,
     name: "Florė Essence",
     description: "Citrus, Floral and Woody",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
     image: saarFlore,
-    price: "₹5,200",
+    price: "₹1,449",
+    launchPrice: "₹900",
   },
 ];
 
@@ -151,9 +189,9 @@ const Collections = () => {
                     {product.description}
                   </p>
                   <p className="text-base font-medium mb-4">
-                    <li> Top Node: {product.topNode} </li>
-                    <li> Middle Node: {product.middleNode} </li>
-                    <li> Base Node: {product.baseNode} </li>
+                    <li> Top Note: {product.topNode} </li>
+                    <li> Heart Note: {product.middleNode} </li>
+                    <li> Base Note: {product.baseNode} </li>
                   </p>
 
                   <p className="text-xl font-medium mb-4 flex items-center gap-2">
@@ -174,6 +212,7 @@ const Collections = () => {
                     /* Show only regular price if launchPrice doesn't exist */
                     <span>{product.price}</span>
                   )}
+
                       <span className="text-green-500 inline-flex items-center gap-1">
 
                       <a

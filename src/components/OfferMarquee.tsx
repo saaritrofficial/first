@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OfferMarquee = () => {
-  const offerText = "Launch Offer - Mother's Day 30% off   |";
+  const offerText = "Launch Offer - Upto 30% off  |";
   // Replace this URL with your actual image path (e.g., a flower or gift icon)
   const iconUrl = "https://flaticon.com"; 
 
