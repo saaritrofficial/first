@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Collections from "@/components/Collections";
 import Story from "@/components/Story";
 import Footer from "@/components/Footer";
+import Combos from "@/components/Combo";
 import OfferMarquee from "@/components/OfferMarquee";
 
 const Index = () => {
@@ -14,6 +15,8 @@ const Index = () => {
       </div>
       <Hero />
       <Collections />
+      <Combos/>
+
       <Story />
       <Footer />
     </div>

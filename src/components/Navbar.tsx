@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+// import Saar_Logo from "../assets/Saar_Logo.jpeg"
+import Saar_Logo from "../assets/saar_logo_noBg.png"
+import Saar_text from "../assets/saar_text_removebg.png"
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,12 +37,20 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex flex-col items-start">
-            <span className="font-serif text-2xl md:text-3xl font-semibold tracking-wide text-gold-gradient">
-              SAAR
-            </span>
-            <span className="text-xs tracking-[0.4em] text-muted-foreground uppercase -mt-1">
-              itr
-            </span>
+          <a href="#" className="flex items-center">
+  <img 
+    src={Saar_Logo} 
+    alt="SAAR Logo" 
+    className="h-10 w-auto md:h-12" // Adjust height as needed
+  />
+
+<img 
+    src={Saar_text} 
+    alt="SAAR Logo" 
+    className="h-8 w-auto md:h-8" // Adjust height as needed
+  />
+
+</a>
           </a>
 
           {/* Desktop Navigation */}

@@ -25,8 +25,8 @@ const PRICE_TIERS = {
     
   },
   standard: {
-    "8ml (mono)": { price: "₹299", launchPrice: "₹200" },
-    "8ml (box)": { price: "₹399", launchPrice: "₹280" },
+    "8ml (mono)": { price: "₹299", launchPrice: "₹199" },
+    "8ml (box)": { price: "₹399", launchPrice: "₹279" },
     "30ml (mono)": { price: "₹699", launchPrice: "₹389" },
     "30ml (box)": { price: "₹799", launchPrice: "₹459" },
     "50ml": { price: "₹1,149", launchPrice: "₹699" },

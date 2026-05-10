@@ -33,8 +33,10 @@ const ComboCard = ({ product, index }) => {
           </p>
           
           <div className="bg-primary/5 p-3 rounded-sm mb-4">
-            <p className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Includes:</p>
-            <p className="text-xs text-foreground/80 italic">{product.topNode} • {product.middleNode}</p>
+         <p className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1"></p>
+
+            <p className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Perfect For:</p>
+            <p className="text-xs text-foreground/80 italic"> {product.perfectFor}</p>
           </div>
         </div>
 
