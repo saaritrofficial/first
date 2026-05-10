@@ -202,8 +202,15 @@ const ProductCard = ({ product, index }) => {
   </div>
 
         <a 
-        href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in ${product.name}. What quantity can I opt for ?`)}`}
-            target="_blank" 
+        // href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in ${product.name}. What quantity can I opt for ?`)}`}
+        href={`https://wa.me/919625663589?text=${encodeURIComponent(
+          `Hi! I'm interested in ${product.name}.\n\n` +
+          `Size: ${selectedSize}\n` +
+          `Price: ${currentVariant.launchPrice || currentVariant.price}\n\n` +
+          `Please provide more information`
+        )}`}    
+        
+        target="_blank" 
           rel="noopener noreferrer" 
           className="ml-auto flex items-center gap-2 px-3 py-1.5 border border-[#25D366]/30 rounded-full hover:bg-[#25D366]/10 transition-all duration-300 group/wa"
         >

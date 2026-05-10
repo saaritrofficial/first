@@ -51,7 +51,7 @@ const ComboCard = ({ product, index }) => {
 
           <a 
           
-          href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in ${product.name}. How to order ?`)}`}
+          href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in ${product.name}. Please provide more information on it`)}`}
 
             target="_blank" 
             rel="noopener noreferrer" 
