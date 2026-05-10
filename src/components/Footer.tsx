@@ -1,4 +1,6 @@
 import { Instagram, Facebook, Mail,MapPin , Phone } from "lucide-react";
+import { FaWhatsapp } from 'react-icons/fa'; // Import at the top of your file
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -98,11 +100,19 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-primary mt-0.5" />
-                <span className="text-muted-foreground text-sm">
-                  India
-                </span>
+            <li className="flex items-start gap-3">
+                <a 
+                  href="https://wa.me/919625663589?" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+                >
+                  {/* Using FaWhatsapp from Font Awesome */}
+                  <FaWhatsapp size={20} className="text-[#25D366] mt-0.5" /> 
+                  <span className="text-muted-foreground text-sm">
+                    Saar Itr
+                  </span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary" />
