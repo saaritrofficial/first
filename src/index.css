@@ -6,88 +6,80 @@
 
 @layer base {
   :root {
-    /* Luxurious dark palette with gold accents */
-    --background: 30 10% 6%;
-    --foreground: 40 20% 92%;
-
-    --card: 30 8% 10%;
-    --card-foreground: 40 20% 92%;
-
-    --popover: 30 8% 10%;
-    --popover-foreground: 40 20% 92%;
-
-    /* Rich gold primary */
-    --primary: 43 74% 49%;
-    --primary-foreground: 30 10% 6%;
-
-    /* Warm cream secondary */
-    --secondary: 35 30% 18%;
-    --secondary-foreground: 40 20% 92%;
-
-    --muted: 30 8% 15%;
-    --muted-foreground: 35 15% 55%;
-
-    /* Amber accent */
-    --accent: 32 80% 45%;
-    --accent-foreground: 40 20% 92%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 35 15% 20%;
-    --input: 35 15% 20%;
-    --ring: 43 74% 49%;
-
-    --radius: 0.25rem;
-
-    /* Custom luxury variables */
-    --gold: 43 74% 49%;
-    --gold-light: 43 60% 65%;
-    --gold-dark: 43 80% 35%;
-    --champagne: 40 30% 85%;
-    --onyx: 30 10% 6%;
-    --charcoal: 30 8% 12%;
-    --warm-white: 40 20% 92%;
-
-    /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%), hsl(32 80% 45%));
-    --gradient-dark: linear-gradient(180deg, hsl(30 10% 6%), hsl(30 8% 12%));
-    --gradient-radial: radial-gradient(ellipse at center, hsl(35 15% 12%) 0%, hsl(30 10% 6%) 70%);
-
-    /* Shadows */
-    --shadow-gold: 0 4px 30px -5px hsl(43 74% 49% / 0.3);
-    --shadow-elegant: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
-
-    --sidebar-background: 30 8% 10%;
-    --sidebar-foreground: 40 20% 92%;
-    --sidebar-primary: 43 74% 49%;
-    --sidebar-primary-foreground: 30 10% 6%;
-    --sidebar-accent: 35 30% 18%;
-    --sidebar-accent-foreground: 40 20% 92%;
-    --sidebar-border: 35 15% 20%;
-    --sidebar-ring: 43 74% 49%;
+    /* Beige luxury palette */
+    --background: 38 35% 92%;
+    --foreground: 30 20% 18%;
+  
+    --card: 40 30% 96%;
+    --card-foreground: 30 20% 18%;
+  
+    --popover: 40 30% 96%;
+    --popover-foreground: 30 20% 18%;
+  
+    /* Elegant gold */
+    --primary: 40 65% 45%;
+    --primary-foreground: 40 30% 96%;
+  
+    /* Soft beige secondary */
+    --secondary: 35 25% 85%;
+    --secondary-foreground: 30 20% 18%;
+  
+    --muted: 35 20% 88%;
+    --muted-foreground: 30 10% 40%;
+  
+    --accent: 35 55% 65%;
+    --accent-foreground: 30 20% 18%;
+  
+    --border: 35 20% 78%;
+    --input: 35 20% 78%;
+    --ring: 40 65% 45%;
+  
+    /* Custom luxury colors */
+    --gold: 40 65% 45%;
+    --gold-light: 42 55% 70%;
+    --gold-dark: 38 70% 35%;
+  
+    --champagne: 42 45% 88%;
+    --onyx: 30 20% 18%;
+    --charcoal: 30 15% 28%;
+    --warm-white: 40 35% 96%;
+  
+    /* New gradients */
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(40 65% 45%),
+      hsl(35 55% 60%)
+    );
+  
+    --gradient-dark: linear-gradient(
+      180deg,
+      hsl(38 35% 92%),
+      hsl(35 30% 86%)
+    );
+  
+    --gradient-radial: radial-gradient(
+      ellipse at center,
+      hsl(40 35% 96%) 0%,
+      hsl(38 30% 90%) 70%
+    );
+  
+    /* Softer shadows */
+    --shadow-gold: 0 4px 25px -5px hsl(40 65% 45% / 0.18);
+    --shadow-elegant: 0 20px 40px -12px hsl(30 20% 20% / 0.12);
   }
 
   .dark {
-    --background: 30 10% 6%;
+    --background: 32 18% 12%;
     --foreground: 40 20% 92%;
-    --card: 30 8% 10%;
+  
+    --card: 32 15% 16%;
     --card-foreground: 40 20% 92%;
-    --popover: 30 8% 10%;
-    --popover-foreground: 40 20% 92%;
-    --primary: 43 74% 49%;
-    --primary-foreground: 30 10% 6%;
-    --secondary: 35 30% 18%;
-    --secondary-foreground: 40 20% 92%;
-    --muted: 30 8% 15%;
-    --muted-foreground: 35 15% 55%;
-    --accent: 32 80% 45%;
-    --accent-foreground: 40 20% 92%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 35 15% 20%;
-    --input: 35 15% 20%;
-    --ring: 43 74% 49%;
+  
+    --primary: 40 65% 55%;
+    --secondary: 35 18% 22%;
+  
+    --muted: 32 12% 20%;
+    --border: 35 12% 26%;
   }
 }
 
@@ -99,6 +91,11 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Montserrat', sans-serif;
+  
+    background-image:
+      radial-gradient(circle at top left,
+        rgba(255,255,255,0.4),
+        transparent 30%);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -108,8 +105,15 @@
 
 @layer components {
   .text-gold-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%);
+    background: linear-gradient(
+      180deg,
+      #f4d7a1 0%,
+      #d4a373 45%,
+      #b08968 100%
+    );
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .border-gold-gradient {
@@ -117,8 +121,12 @@
   }
 
   .btn-luxury {
-    @apply relative overflow-hidden transition-all duration-500;
-    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
+    @apply relative overflow-hidden transition-all duration-500 text-white;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold-light)) 0%,
+      hsl(var(--gold-dark)) 100%
+    );
   }
 
   .btn-luxury::before {
@@ -141,8 +149,9 @@
 
   .glass-card {
     @apply backdrop-blur-md;
-    background: hsl(var(--card) / 0.8);
-    border: 1px solid hsl(var(--border) / 0.5);
+    background: hsl(var(--card) / 0.75);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-elegant);
   }
 
   .animate-float {

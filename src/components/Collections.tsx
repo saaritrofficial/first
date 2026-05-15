@@ -184,41 +184,40 @@ const ProductCard = ({ product, index }) => {
           ))}
     </select>
   </div>
-
-  {/* Dynamic Price */}
-  <div className="flex items-center gap-2 text-lg font-medium">
-    {currentVariant.launchPrice ? (
-      <>
-        <span className="line-through decoration-red-500 text-red-500 text-sm">
-          {currentVariant.price}
-        </span>
-        <span className="text-green-500">
-          {currentVariant.launchPrice}
-        </span>
-      </>
-    ) : (
-      <span>{currentVariant.price}</span>
-    )}
-  </div>
-
-        <a 
-        // href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in ${product.name}. What quantity can I opt for ?`)}`}
-        href={`https://wa.me/919625663589?text=${encodeURIComponent(
-          `Hi! I'm interested in ${product.name}.\n\n` +
-          `Size: ${selectedSize}\n` +
-          `Price: ${currentVariant.launchPrice || currentVariant.price}\n\n` +
-          `Please provide more information`
-        )}`}    
-        
-        target="_blank" 
-          rel="noopener noreferrer" 
-          className="ml-auto flex items-center gap-2 px-3 py-1.5 border border-[#25D366]/30 rounded-full hover:bg-[#25D366]/10 transition-all duration-300 group/wa"
-        >
-          <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold group-hover/wa:text-[#25D366]">
-            Order on
-          </span>
-          <FaWhatsapp className="text-[#25D366] text-xl" />
-        </a>
+{/* Dynamic Price */}
+<div className="flex items-center gap-3 text-lg font-medium">
+  {currentVariant.launchPrice ? (
+    <>
+      {/* Light brown for the original price with a clean strikethrough */}
+      <span className="line-through decoration-[#8D7B6D] text-[#8D7B6D] text-sm">
+        {currentVariant.price}
+      </span>
+      {/* Darker, premium green for the discounted price */}
+      <span className="text-[#1B3022] font-bold">
+        {currentVariant.launchPrice}
+      </span>
+    </>
+  ) : (
+    <span className="text-[#1A1A1A]">{currentVariant.price}</span>
+  )}
+</div>
+<a 
+  href={`https://wa.me/919625663589?text=${encodeURIComponent(
+    `Hi! I'm interested in ${product.name}.\n\n` +
+    `Size: ${selectedSize}\n` +
+    `Price: ${currentVariant.launchPrice || currentVariant.price}\n\n` +
+    `Please provide more information`
+  )}`}    
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="ml-auto flex items-center gap-2 px-3 py-1.5 border border-[#BCA994]/40 rounded-full hover:bg-[#4B3A2F]/5 transition-all duration-300 group/wa shadow-sm"
+>
+  <span className="text-[10px] uppercase tracking-wider text-[#4B3A2F] font-bold group-hover/wa:text-[#8D7B6D]">
+    Order on
+  </span>
+  {/* WhatsApp icon in a sophisticated gold/bronze instead of green */}
+  <FaWhatsapp className="text-[#C6A27E] text-xl transition-transform group-hover/wa:scale-110" />
+</a>
       </div>
         </div>
         <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-500 pointer-events-none" />
