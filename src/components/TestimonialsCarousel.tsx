@@ -5,7 +5,7 @@ const testimonialsData = [
   { "testimonial": "Very Gud Fragrance.Itr smells so strong. Still both my wrists are smelling. Honestly gud efforts", "buyer": "Anita Lalchandani", "order": 1 },
   { "testimonial": "Just wanted to inform you that I am in love with your perfumes", "buyer": "Debashree Bannerjee", "order": 2 },
   { "testimonial": "Thank you so much. The perfumes I ordered from you as a Mother's Day Gift were really loved by Aunty. Unhone specially bola ki all the fragrances are very beautiful, classy and soothing. She was genuinely very happy and said ki 'Fragrance bahut acchi Hai. Aise hi quality maintain kariyega.' Your perfumes really made the gift feel extra special and memorable for her. Once again, Thanks you so much for such lovely fragrances and beautiful service", "buyer": "Meetu Baweja", "order": 3 },
-  { "testimonial": "Hello I really liked the fragrances specially Rose oud sandal rose. It was long lasting. Even the Aqua Aura is fabulous", "buyer": "Aparna Gupta", "order": 4 },
+  { "testimonial": "Hello I really liked the fragrances specially Rose oud, sandal rose. It was long lasting. Even the Aqua Aura is fabulous", "buyer": "Aparna Gupta", "order": 4 },
   { "testimonial": "This perfume has an elegant and long-lasting fragrance that feels both fresh and luxurious. The scent is perfectly balanced - not too strong, yet noticeable enough to leave a lasting impression. It starts with a refreshing top note and slowly settles into a warm, soothing aroma that stays for hours", "buyer": "Kirti Lata Awasthi", "order": 5 },
 ];
 
