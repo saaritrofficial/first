@@ -4,13 +4,13 @@ import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from "lucide-react"
 // Your structured JSON
 const faqData = [
   { "section": "shipping", "questionNum": "1", "question": "What would be the timeline for shipping?", "answer": "Delivery times vary by location. Orders are typically delivered within 5 to 7 business days after processing. You’ll receive the delivery details in your confirmation message" },
-  { "section": "shipping", "questionNum": "2", "question": "Do you offer free shipping?", "answer": "Yes, we offer free domestic shipping on orders above ₹999. Shipping offers may vary from time to time based on ongoing promotions and special offers" },
-  { "section": "orders", "questionNum": "2", "question": "Is gift wrapping available for my order?", "answer": "Yes, your order can be gift wrapped. Simply mention your request while placing the order. You can also include a personalized handwritten note" },
+  { "section": "shipping", "questionNum": "2", "question": "Do you offer free shipping?", "answer": "Yes, we offer free domestic shipping on orders above ₹999." },
+  { "section": "orders", "questionNum": "2", "question": "Is gift wrapping available for my order?", "answer": "Yes, your order can be gift wrapped. Simply mention your request while placing the order. You can also include a personalized handwritten note on your behalf." },
   { "section": "orders", "questionNum": "3", "question": "Can I modify my order after placing it?", "answer": "Orders can be modified within 1 hour of placement by messaging." },
   { "section": "payments", "questionNum": "4", "question": "What payment methods do you accept?", "answer": "We accept UPI based payment for online order." },
   { "section": "fragrance", "questionNum": "4", "question": "Are your fragrances unisex?", "answer": "Yes, our fragrances are thoughtfully crafted to be enjoyed by everyone, regardless of gender." },
-  { "section": "fragrance", "questionNum": "4", "question": "Which fragrance is best for daily / office wear?", "answer": "Aqua Aura, Cool Rush, Stone Edge, and Blue Edge are perfect choices for daily use and office wear, offering fresh and versatile fragrances." },
-  { "section": "fragrance", "questionNum": "4", "question": "Which fragrance is best for special occasions?", "answer": "Oud Eternal, Amber Drift, and Golden Aura are ideal for special occasions, offering rich, elegant, and long-lasting fragrances." },
+  { "section": "fragrance", "questionNum": "4", "question": "Which fragrance is best for daily / office wear?", "answer": "Aqua Aura, Cool Rush, Stone Edge, and Blue Edge are perfect choices for daily use and office wear, offering fresh and versatile fragrances, although it may vary depending on personal preference." },
+  { "section": "fragrance", "questionNum": "4", "question": "Which fragrance is best for special occasions?", "answer": "Oud Eternal, Amber Drift, and Golden Aura are ideal for special occasions, offering rich, elegant, and long-lasting fragrances, though the perfect choice also depends on personal preference." },
   { "section": "fragrance", "questionNum": "4", "question": "Can I customize my discovery set?", "answer": "Yes, you can choose any 5 fragrances from the 10 fragrance profiles available on our website." },
 ];
 
