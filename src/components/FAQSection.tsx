@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from "lucide-react"
 const faqData = [
   { "section": "shipping", "questionNum": "1", "question": "What would be the timeline for shipping?", "answer": "Delivery times vary by location. Orders are typically delivered within 5 to 7 business days after processing. You’ll receive the delivery details in your confirmation message" },
   { "section": "shipping", "questionNum": "2", "question": "Do you offer free shipping?", "answer": "Yes, we offer free domestic shipping on orders above ₹999." },
-  { "section": "orders", "questionNum": "2", "question": "Is gift wrapping available for my order?", "answer": "Yes, your order can be gift wrapped. Simply mention your request while placing the order. You can also include a personalized handwritten note on your behalf." },
+  { "section": "orders", "questionNum": "2", "question": "Is gift wrapping available for my order?", "answer": "Yes, your order can be gift wrapped. Simply mention your request while placing the order. We can also include a personalized handwritten note on your behalf." },
   { "section": "orders", "questionNum": "3", "question": "Can I modify my order after placing it?", "answer": "Orders can be modified within 1 hour of placement by messaging." },
   { "section": "payments", "questionNum": "4", "question": "What payment methods do you accept?", "answer": "We accept UPI based payment for online order." },
   { "section": "fragrance", "questionNum": "4", "question": "Are your fragrances unisex?", "answer": "Yes, our fragrances are thoughtfully crafted to be enjoyed by everyone, regardless of gender." },
