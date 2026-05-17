@@ -70,7 +70,7 @@ const Story = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {features.map((feature, index) => (
             <div
               key={feature.title}
@@ -88,7 +88,7 @@ const Story = () => {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Quote */}
         <div className="mt-20 text-center">

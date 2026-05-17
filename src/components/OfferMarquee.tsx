@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OfferMarquee = () => {
-  const offerText = "Launch Offer - Upto 30% off  |";
+  const offerText = "Launch Offer - Upto 30% off | Free Domestic Shipping on Orders Above ₹999 |";
   // Replace this URL with your actual image path (e.g., a flower or gift icon)
   const iconUrl = "https://flaticon.com"; 
 

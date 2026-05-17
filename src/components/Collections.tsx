@@ -1,4 +1,3 @@
-
 import saarBlueedge from "@/assets/Blue_Edge_image.jpg";
 import saarAmberDrift from "@/assets/Amber_Drift_image.jpg";
 import saarAquaImage from "@/assets/Aqua_Aura_image.jpg";
@@ -10,8 +9,7 @@ import saarKingmyst from "@/assets/King_Mystique_image.jpg";
 import saarOudeternal from "@/assets/Oud_Eternal_image.jpg";
 import saarPulse from "@/assets/Pluse-X_image.jpg";
 import { FaWhatsapp } from "react-icons/fa";
-import React, { useState } from 'react';
-// import { collections, PRICE_TIERS } from '../data/ProductDetails'; 
+import React, { useState, useRef  } from 'react';
 
 const PRICE_TIERS = {
   premium: {
@@ -21,8 +19,6 @@ const PRICE_TIERS = {
     "30ml (box)": { price: "₹899", launchPrice: "₹559" },
     "50ml": { price: "₹1,249", launchPrice: "₹799" },
     "60ml": { price: "₹1,549", launchPrice: "₹999" }
-
-    
   },
   standard: {
     "8ml (mono)": { price: "₹299", launchPrice: "₹199" },
@@ -130,122 +126,146 @@ const collections = [
   }
 ];
 
-
-// 1. Create a sub-component for the individual Product Card
+// Product Card Sub-component
 const ProductCard = ({ product, index }) => {
-  // Local state for each card's selected size
-  const [selectedSize, setSelectedSize] = React.useState("60ml");
-  
-  
+  const [selectedSize, setSelectedSize] = useState("60ml");
   const variants = product.premium === "yes" ? PRICE_TIERS.premium : PRICE_TIERS.standard;
-
-
-    // Get current price based on selected size from the chosen tier
-    const currentVariant = variants[selectedSize];
-
- 
+  const currentVariant = variants[selectedSize];
 
   return (
     <div className="group relative animate-fade-up" style={{ animationDelay: `${index * 0.15}s` }}>
-      <div className="relative overflow-hidden bg-card rounded-sm">
-        {/* Image Container Code remains the same... */}
-        <div className="group relative aspect-square overflow-hidden">
-             {product.premium && (
-                <div className="absolute top-0 left-0 z-20 w-32 h-32 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[22px] left-[-34px] w-[160px] rotate-[-45deg] bg-yellow-500 text-black text-sm font-black py-1.5 shadow-md text-center uppercase tracking-wider"> Premium </div>
-                </div>
-             )}
-            <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative overflow-hidden bg-white border border-[#BCA994]/10 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-500">
+        <div className="group relative aspect-square overflow-hidden bg-[#F9F8F6]">
+          {product.premium === "yes" && (
+            <div className="absolute top-0 left-0 z-20 w-32 h-32 overflow-hidden pointer-events-none">
+              <div className="absolute top-[22px] left-[-34px] w-[160px] rotate-[-45deg] bg-yellow-500 text-black text-xs font-black py-1.5 shadow-md text-center uppercase tracking-wider">
+                Premium
+              </div>
+            </div>
+          )}
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+          />
         </div>
 
         <div className="p-6">
-          <h3 className="font-serif text-2xl text-foreground mb-2">{product.name}</h3>
-          <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
+          <h3 className="font-serif text-2xl text-[#1A1A1A] mb-2">{product.name}</h3>
+          <p className="text-gray-600 text-sm mb-4 min-h-[40px]">{product.description}</p>
           
-          <ul className="text-sm font-medium mb-4 space-y-1">
-            <li>Top Note: {product.topNode}</li>
-            <li>Heart Note: {product.middleNode}</li>
-            <li>Base Note: {product.baseNode}</li>
+          <ul className="text-sm font-medium mb-6 space-y-1.5 text-gray-700 border-t border-b border-[#BCA994]/10 py-3">
+            <li><span className="font-bold text-gray-500 text-xs uppercase tracking-wider">Top:</span> {product.topNode}</li>
+            <li><span className="font-bold text-gray-500 text-xs uppercase tracking-wider">Heart:</span> {product.middleNode}</li>
+            <li><span className="font-bold text-gray-500 text-xs uppercase tracking-wider">Base:</span> {product.baseNode}</li>
           </ul>
 
-         {/* Size and Price on the same line */}
-<div className="flex flex-wrap items-center gap-4 mb-4">
-  {/* Size Selection */}
-  <div className="flex items-center gap-2">
-    {/* <span className="text-sm font-normal text-muted-foreground whitespace-nowrap">Size:</span> */}
-    <select 
-      value={selectedSize} 
-      onChange={(e) => setSelectedSize(e.target.value)}
-      className="bg-background border border-primary/20 rounded px-2 py-1 text-sm outline-none focus:border-primary cursor-pointer"
-    >
-     {Object.keys(variants).map((size) => (
-            <option key={size} value={size}>{size}</option>
-          ))}
-    </select>
-  </div>
-{/* Dynamic Price */}
-<div className="flex items-center gap-3 text-lg font-medium">
-  {currentVariant.launchPrice ? (
-    <>
-      {/* Light brown for the original price with a clean strikethrough */}
-      <span className="line-through decoration-[#8D7B6D] text-[#8D7B6D] text-sm">
-        {currentVariant.price}
-      </span>
-      {/* Darker, premium green for the discounted price */}
-      <span className="text-[#1B3022] font-bold">
-        {currentVariant.launchPrice}
-      </span>
-    </>
-  ) : (
-    <span className="text-[#1A1A1A]">{currentVariant.price}</span>
-  )}
-</div>
-<a 
-  href={`https://wa.me/919625663589?text=${encodeURIComponent(
-    `Hi! I'm interested in ${product.name}.\n\n` +
-    `Size: ${selectedSize}\n` +
-    `Price: ${currentVariant.launchPrice || currentVariant.price}\n\n` +
-    `Please provide more information`
-  )}`}    
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="ml-auto flex items-center gap-2 px-3 py-1.5 border border-[#BCA994]/40 rounded-full hover:bg-[#4B3A2F]/5 transition-all duration-300 group/wa shadow-sm"
->
-  <span className="text-[10px] uppercase tracking-wider text-[#4B3A2F] font-bold group-hover/wa:text-[#8D7B6D]">
-    Order on
-  </span>
-  {/* WhatsApp icon in a sophisticated gold/bronze instead of green */}
-  <FaWhatsapp className="text-[#C6A27E] text-xl transition-transform group-hover/wa:scale-110" />
-</a>
-      </div>
+          <div className="flex items-center justify-between gap-2 flex-wrap mt-4">
+            <select 
+              value={selectedSize} 
+              onChange={(e) => setSelectedSize(e.target.value)}
+              className="bg-white border border-[#BCA994]/40 rounded px-2.5 py-1 text-sm outline-none focus:border-[#4B3A2F] cursor-pointer text-gray-800"
+            >
+              {Object.keys(variants).map((size) => (
+                <option key={size} value={size}>{size}</option>
+              ))}
+            </select>
+
+            <div className="flex items-baseline gap-2 text-lg font-medium">
+              {currentVariant.launchPrice ? (
+                <>
+                  <span className="line-through decoration-[#8D7B6D] text-[#8D7B6D] text-xs font-light">
+                    {currentVariant.price}
+                  </span>
+                  <span className="text-[#1B3022] font-bold">
+                    {currentVariant.launchPrice}
+                  </span>
+                </>
+              ) : (
+                <span className="text-[#1A1A1A] font-bold">{currentVariant.price}</span>
+              )}
+            </div>
+
+            <a 
+              href={`https://wa.me/919625663589?text=${encodeURIComponent(
+                `Hi! I'm interested in ${product.name}.\n\nSize: ${selectedSize}\nPrice: ${currentVariant.launchPrice || currentVariant.price}\n\nPlease provide more information.`
+              )}`}    
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 px-3 py-1.5 border border-[#BCA994]/40 rounded-full hover:bg-[#4B3A2F]/5 transition-all duration-300 group/wa shadow-sm"
+            >
+              <span className="text-[10px] uppercase tracking-wider text-[#4B3A2F] font-bold">
+                Order
+              </span>
+              <FaWhatsapp className="text-[#C6A27E] text-lg transition-transform group-hover/wa:scale-110" />
+            </a>
+          </div>
         </div>
-        <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-500 pointer-events-none" />
       </div>
     </div>
   );
 };
 
-// 2. Main Collections Component
+// Main Collections Component
 const Collections = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const sectionRef = useRef(null);
+
+
+  // Configure number of initial grid cards to preview
+  const INITIAL_VISIBLE_COUNT = 4;
+
+  const visibleProducts = isExpanded 
+    ? collections 
+    : collections.slice(0, INITIAL_VISIBLE_COUNT);
+
+      // Toggle button actions
+  const handleToggle = () => {
+    if (isExpanded) {
+      // If closing, toggle the state first, then smoothly snap layout viewpoint up
+      setIsExpanded(false);
+      sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      setIsExpanded(true);
+    }
+  };
+
+
   return (
-    <section id="collections" className="py-24 bg-background">
+    <section 
+      ref={sectionRef} // Attached reference pointer here
+      id="collections" 
+      className="py-16 bg-[#FDFCFB] scroll-mt-20" // scroll-mt accounts for sticky headers if any
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-            {/* Header code remains the same... */}
-            <div className="flex items-center justify-center gap-4 mb-6">
-                <div className="w-12 h-px bg-gradient-to-r from-transparent to-primary" />
-                <span className="text-xs tracking-[0.4em] text-primary uppercase"> Signature Scents </span>
-                <div className="w-12 h-px bg-gradient-to-l from-transparent to-primary" />
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4"> Our Collections </h2>
+        <div className="text-center mb-12">
+          <span className="text-xs tracking-[0.4em] text-[#8D7B6D] uppercase block mb-3 font-bold">
+            Our Masterpieces
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] mb-4">
+            The Fragrance Lounge
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {collections.map((product, index) => (
+        {/* Responsive Layout Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          {visibleProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
           ))}
         </div>
+
+        {/* View All Button Trigger Control */}
+        {collections.length > INITIAL_VISIBLE_COUNT && (
+          <div className="text-center mt-12 relative z-10">
+            <button
+              onClick={handleToggle}
+              className="px-8 py-3 border border-[#4B3A2F] text-[#4B3A2F] rounded-full hover:bg-[#4B3A2F] hover:text-white transition-all duration-300 text-[11px] font-bold uppercase tracking-[0.2em] shadow-sm cursor-pointer"
+            >
+              {isExpanded ? "Show Less" : "View All Collections"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

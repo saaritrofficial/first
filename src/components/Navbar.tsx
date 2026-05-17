@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-// import Saar_Logo from "../assets/Saar_Logo.jpeg"
-import Saar_Logo from "../assets/saar_logo_noBg.png"
-import Saar_text from "../assets/saar_text_removebg.png"
-
+import Saar_Logo from "../assets/saar_logo_noBg.png";
+import Saar_text from "../assets/saar_text_removebg.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,11 +15,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Updated layout config mapping to use hash link anchors natively 
   const navLinks = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "#" },
     { name: "Collections", href: "#collections" },
     { name: "Our Story", href: "#story" },
-    //{ name: "Ingredients", href: "#ingredients" },
+    { name: "Testimonials", href: "#testimonials" }, 
+    { name: "FAQ", href: "#faq" }, 
     { name: "Contact", href: "#contact" },
   ];
 
@@ -35,25 +35,21 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex flex-col items-start">
-          <a href="#" className="flex items-center">
-  <img 
-    src={Saar_Logo} 
-    alt="SAAR Logo" 
-    className="h-10 w-auto md:h-12" // Adjust height as needed
-  />
-
-<img 
-    src={Saar_text} 
-    alt="SAAR Logo" 
-    className="h-8 w-auto md:h-8" // Adjust height as needed
-  />
-
-</a>
+          {/* Logo links */}
+          <a href="#" className="flex items-center gap-2">
+            <img 
+              src={Saar_Logo} 
+              alt="SAAR Logo" 
+              className="h-10 w-auto md:h-12"
+            />
+            <img 
+              src={Saar_text} 
+              alt="SAAR Typography" 
+              className="h-8 w-auto md:h-8"
+            />
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation Link Array Layout */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -66,17 +62,17 @@ const Navbar = () => {
             ))}
           </div>
 
-          
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button Trigger */}
           <button
             className="md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Navigation Menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Flyout Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
