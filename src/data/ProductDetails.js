@@ -1,3 +1,14 @@
+import saarBlueedge from "@/assets/Blue_Edge_image.jpg";
+import saarAmberDrift from "@/assets/Amber_Drift_image.jpg";
+import saarAquaImage from "@/assets/Aqua_Aura_image.jpg";
+import saarColdRush from "@/assets/Cold_Rush_image.jpg";
+import saarStoneedge from "@/assets/Stone_edge_image.jpg";
+import saarFlore from "@/assets/Flore_Essence_image.jpg";
+import saarGoldenaura from "@/assets/Golden_Aura_image.jpg";
+import saarKingmyst from "@/assets/King_Mystique_image.jpg";
+import saarOudeternal from "@/assets/Oud_Eternal_image.jpg";
+import saarPulse from "@/assets/Pluse-X_image.jpg";
+
 export const PRICE_TIERS = {
     premium: {
       "30ml": { price: "₹999", launchPrice: "₹699" },
@@ -20,6 +31,7 @@ export const collections = [
       middleNode: "Ginger, Jasmine",
       baseNode: "Woody, Sandalwood, Amber",
       image: saarBlueedge,
+      detailedImages: [saarBlueedge], // Add more images as needed
       premium: "yes",
     },
     {
@@ -29,7 +41,9 @@ export const collections = [
       topNode: "Lemon, Bergamot, Fresh Notes ",
       middleNode: "Jasmine, Rosemary",
       baseNode: "Musky, Cedar",
-      image: saarAquaImage
+      image: saarAquaImage,
+      detailedImages: [saarAquaImage], // Add more images as needed
+
     },
     {
       id: 2,

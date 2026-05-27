@@ -15,7 +15,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Updated layout config mapping to use hash link anchors natively 
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "Collections", href: "#collections" },
@@ -28,8 +27,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
+        isScrolled || isMobileMenuOpen
+          ? "bg-white border-b border-border shadow-sm md:bg-background/95 md:backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -49,7 +48,7 @@ const Navbar = () => {
             />
           </a>
 
-          {/* Desktop Navigation Link Array Layout */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -64,7 +63,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button Trigger */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground p-1 rounded focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
@@ -72,21 +71,21 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Flyout Menu */}
+        {/* Mobile Flyout Menu - Enforced Solid Card Background */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 bg-white animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm tracking-wider uppercase text-foreground/80 hover:text-primary transition-colors duration-300"
+                  className="text-sm tracking-wider uppercase text-foreground/80 hover:text-primary transition-colors duration-300 pt-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <button className="btn-outline-luxury px-6 py-2 text-sm tracking-wider uppercase mt-2">
+              <button className="btn-outline-luxury px-6 py-2 text-sm tracking-wider uppercase mt-2 w-full text-center">
                 Shop Now
               </button>
             </div>
