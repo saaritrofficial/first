@@ -224,7 +224,8 @@ const ProductDetailModal = ({
 
             {/* Checkout Action Button */}
             <a 
-              href={`https://wa.me{whatsAppNumber}?text=${whatsappMessage}`}    
+              href={`https://wa.me/919625663589?text=${whatsappMessage}`}
+
               target="_blank" 
               rel="noopener noreferrer" 
               style={{ '--btn-bg': primaryBtnColor, '--btn-hover': primaryBtnHoverColor }}
