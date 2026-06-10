@@ -3,8 +3,16 @@ import { useEffect, useState, useRef } from "react";
 import img1 from "@/assets/Main_Page/1_Tradition_2.png";
 import img2 from "@/assets/Main_Page/2_Notes_2.png";
 import img3 from "@/assets/Main_Page/3_Discovery_2.png";
+import img4 from "@/assets/FDAY/Hamper.jpeg";
+import img5 from "@/assets/FDAY/H1.jpeg";
+import img6 from "@/assets/FDAY/H2.jpeg";
+import img7 from "@/assets/FDAY/H3.jpeg";
+import img8 from "@/assets/FDAY/H4.jpeg";
 
-const originalImages = [img1, img2, img3];
+//const originalImages = [img1, img2, img3];
+//const images = [originalImages[originalImages.length - 1], ...originalImages, originalImages];
+
+const originalImages = [img4, img5, img6, img7, img8];
 const images = [originalImages[originalImages.length - 1], ...originalImages, originalImages];
 
 const HeroCarousel = () => {
