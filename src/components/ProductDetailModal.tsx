@@ -39,7 +39,7 @@ const ProductDetailModal = ({
   const formattedTotalPrice = `₹${totalPrice.toLocaleString('en-IN')}`;
 
   const whatsappMessage = encodeURIComponent(
-    `Hi! I'm interested in buying ${product.name}.\n\nSize: ${selectedSize}\nQuantity: ${quantity}\nTotal Price: ${formattedTotalPrice}\n\nPlease confirm availability.`
+    `Hi! I'm interested in buying ${product.name}.\n\nSize: ${selectedSize}\nQuantity: ${quantity}\nTotal Price: ${formattedTotalPrice}\n\nPlease share payment link.`
   );
 
   const nextImage = () => {

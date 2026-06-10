@@ -60,7 +60,7 @@ const ComboCard = ({ product, index }) => {
 
           {/* Sophisticated Gold Button instead of Green */}
           <a 
-            href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in the ${product.name} combo. Could you share the details?`)}`}
+            href={`https://wa.me/919625663589?text=${encodeURIComponent(`Hi! I'm interested in the ${product.name} combo. Please share payment link?`)}`}
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-3 px-6 py-2.5 bg-[#4B3A2F] text-white rounded-full hover:bg-[#2C1E16] transition-all duration-300 shadow-sm group/wa"
