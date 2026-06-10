@@ -1,12 +1,13 @@
 import React from 'react';
 
 const OfferMarquee = () => {
-  const offerText = "Launch Offer - Upto 30% off | Free Domestic Shipping on Orders Above ₹999 |";
+  //const offerText = "Launch Offer - Upto 30% off | Free Domestic Shipping on Orders Above ₹999 |";
+  const offerText = "Father's Day Offer | Curated Hamper for celebrations | Limited Time Offer |";
   // Replace this URL with your actual image path (e.g., a flower or gift icon)
   const iconUrl = "https://flaticon.com"; 
 
   const MarqueeItem = () => (
-    <div className="flex items-center gap-8 px-4">
+    <div className="flex items-center gap-1 px-2">
       <span className="text-lg font-bold uppercase tracking-widest">{offerText}</span>
       {/* <img src={iconUrl} alt="Offer Icon" className="h-8 w-8 object-contain" /> */}
     </div>
