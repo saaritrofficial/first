@@ -4,6 +4,7 @@ import Collections from "@/components/Collections";
 import Story from "@/components/Story";
 import Footer from "@/components/Footer";
 import Combos from "@/components/Combo";
+import CollectionsOffer from "@/components/CollectionsOffer";
 import HeroCarousel from "@/components/HeroCarousel";
 import OfferMarquee from "@/components/OfferMarquee";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -17,6 +18,8 @@ const Index = () => {
          <OfferMarquee />
       </div>
       <HeroCarousel />
+      <CollectionsOffer/>
+
       {/* <Hero /> */}
       <Collections />
       <Combos/>
