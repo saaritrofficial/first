@@ -6,8 +6,8 @@ import { collectionsjson } from "../data/offerDetails";
 const ProductCard = ({ product, index, onCardClick }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const isPremium = product.tier ? product.tier === "premium" : (product.id === 1 || product.id === 2);
 
+  const isPremium = false
   const cleanNumber = (priceStr) => {
     if (!priceStr) return 0;
     return parseInt(priceStr.replace(/[^0-9]/g, ''), 10);
