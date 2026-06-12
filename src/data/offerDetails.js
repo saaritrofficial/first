@@ -4,21 +4,6 @@ import H2 from "@/assets/FDAY/H2.jpeg"
 import H3 from "@/assets/FDAY/H3.jpeg"
 import H4 from "@/assets/FDAY/H4.jpeg"
 
-
-
-export const PRICE_TIERS = {
-    premium: {
-      "30ml": { price: "₹999", launchPrice: "₹699" },
-      "60ml": { price: "₹1,549", launchPrice: "₹999" },
-      "100ml": { price: "₹2,499", launchPrice: "₹1,899" }
-    },
-    standard: {
-      "30ml": { price: "₹899", launchPrice: "₹599" },
-      "60ml": { price: "₹1,449", launchPrice: "₹899" },
-      "100ml": { price: "₹2,299", launchPrice: "₹1,699" }
-    }
-  };
-
 export const collectionsjson = [
     {
       id: 1,
@@ -28,6 +13,8 @@ export const collectionsjson = [
       middleNode: "Ginger, Jasmine",
       baseNode: "Woody, Sandalwood, Amber",
       image: H1,
+      oldPrice: "₹1518",
+      newPrice: "₹849",
       detailedImages: [H1], // Add more images as needed
     },
     {
@@ -38,6 +25,8 @@ export const collectionsjson = [
       middleNode: "Jasmine, Rosemary",
       baseNode: "Musky, Cedar",
       image: H2,
+      oldPrice: "₹1268",
+      newPrice: "₹749",
       detailedImages: [H2], // Add more images as needed
 
     },
@@ -48,6 +37,8 @@ export const collectionsjson = [
       topNode: "Orange, Grapefruit, Mint",
       middleNode: "Cinnamon, Spicy, Rose",
       baseNode: "Woody, Amber, Leathery",
+      oldPrice: "₹1168",
+      newPrice: "₹649",
       image: H3
     },
     {
@@ -57,6 +48,8 @@ export const collectionsjson = [
       topNode: "Orange, Grapefruit, Mint",
       middleNode: "Cinnamon, Spicy, Rose",
       baseNode: "Woody, Amber, Leathery",
+      oldPrice: "₹1068",
+      newPrice: "₹599",
       image: H4
     }
   ]
