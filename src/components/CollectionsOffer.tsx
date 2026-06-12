@@ -173,13 +173,6 @@ const CollectionsOffer = () => {
         </div>
       )}
 
-      <ProductDetailOfferModal 
-        product={selectedProduct} 
-        onClose={() => setSelectedProduct(null)} 
-        accentColor="#C6A27E"
-        primaryBtnColor="#1B3022" 
-        primaryBtnHoverColor="#0d1811"
-      />
     </section>
   );
 };

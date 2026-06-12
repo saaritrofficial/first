@@ -228,7 +228,7 @@ const ProductDetailModal = ({
 
               target="_blank" 
               rel="noopener noreferrer" 
-              style={{ '--btn-bg': primaryBtnColor, '--btn-hover': primaryBtnHoverColor }}
+              style={{ '--btn-bg': primaryBtnColor, '--btn-hover': primaryBtnHoverColor } as React.CSSProperties}
               className="flex items-center justify-center gap-2 md:gap-3 w-full py-2.5 md:py-3 bg-[var(--btn-bg)] hover:bg-[var(--btn-hover)] text-white font-medium rounded shadow-sm transition-all duration-300"
             >
               <FaWhatsapp className="text-lg md:text-xl" />

@@ -1,8 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 
-import img1 from "@/assets/Main_Page/1_Tradition_2.png";
-import img2 from "@/assets/Main_Page/2_Notes_2.png";
-import img3 from "@/assets/Main_Page/3_Discovery_2.png";
 import img4 from "@/assets/FDAY/Hamper.png";
 import img5 from "@/assets/FDAY/H1_C.png";
 import img6 from "@/assets/FDAY/H2_C.png";
@@ -10,10 +7,7 @@ import img7 from "@/assets/FDAY/H3_C.png";
 import img8 from "@/assets/FDAY/H4_C.png";
 
 const originalImages = [img4, img5, img6, img7, img8];
-const images = [originalImages[originalImages.length - 1], ...originalImages, originalImages];
-
-// const originalImages = [img4, img5, img6, img7, img8];
-// const images = [originalImages[originalImages.length - 1], ...originalImages, originalImages];
+const images = [originalImages[originalImages.length - 1], ...originalImages, originalImages[0]];
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(1);
@@ -75,6 +69,8 @@ const HeroCarousel = () => {
     return current - 1;
   };
 
+  const normalizedImages = Array.isArray(images) ? images : [images];
+
   return (
     <div className="relative w-full overflow-hidden py-4 md:py-6 bg-background">
       <div
@@ -92,7 +88,7 @@ const HeroCarousel = () => {
           }}
           onTransitionEnd={() => setIsTransitioning(true)}
         >
-          {images.map((image, index) => (
+          {normalizedImages.map((image, index) => (
             <div
               key={index}
               className="h-full w-full md:w-[50%] shrink-0 px-2"
