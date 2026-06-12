@@ -30,7 +30,7 @@ const ProductCard = ({ product, index, onCardClick }) => {
         
         <div>
           {/* Compressed Clickable Image Visual */}
-          <div className="cursor-pointer relative aspect-[4/3] overflow-hidden bg-[#F9F8F6]" onClick={() => onCardClick(product)}>
+          <div className="cursor-pointer relative aspect-[3/4] overflow-hidden bg-[#F9F8F6]" onClick={() => onCardClick(product)}>
             {isPremium && (
               <div className="absolute top-0 left-0 z-20 w-24 h-24 overflow-hidden pointer-events-none">
                 <div className="absolute top-[16px] left-[-40px] w-[140px] rotate-[-45deg] bg-yellow-500 text-black text-[10px] font-black py-1 shadow-md text-center uppercase tracking-wider">

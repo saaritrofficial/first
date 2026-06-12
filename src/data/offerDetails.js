@@ -1,8 +1,8 @@
 
-import H1 from "@/assets/FDAY/H1.jpeg"
-import H2 from "@/assets/FDAY/H2.jpeg"
-import H3 from "@/assets/FDAY/H3.jpeg"
-import H4 from "@/assets/FDAY/H4.jpeg"
+import H1 from "@/assets/FDAY/H1_3_4.jpeg"
+import H2 from "@/assets/FDAY/H2_3_4.jpeg"
+import H3 from "@/assets/FDAY/H3_3_4.jpeg"
+import H4 from "@/assets/FDAY/H4_3_4.jpeg"
 
 export const collectionsjson = [
     {
