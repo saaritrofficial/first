@@ -1,8 +1,8 @@
 import React from 'react';
 
 const OfferMarquee = () => {
-  //const offerText = "Launch Offer - Upto 30% off | Free Domestic Shipping on Orders Above ₹999 |";
-  const offerText = "Father's Day Offer | Curated Hamper for celebrations | Limited Time Offer |";
+  const offerText = "Launch Offer - Upto 30% off | Limited time remains to enjoy exclusive pricing |";
+  //const offerText = "Father's Day Offer | Curated Hamper for celebrations | Limited Time Offer |";
   // Replace this URL with your actual image path (e.g., a flower or gift icon)
   const iconUrl = "https://flaticon.com"; 
 

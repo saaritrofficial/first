@@ -1,13 +1,25 @@
-import saarBlueedge from "@/assets/Blue_Edge_image.jpg";
-import saarAmberDrift from "@/assets/Amber_Drift_image.jpg";
-import saarAquaImage from "@/assets/Aqua_Aura_image.jpg";
-import saarColdRush from "@/assets/Cold_Rush_image.jpg";
-import saarStoneedge from "@/assets/Stone_edge_image.jpg";
-import saarFlore from "@/assets/Flore_Essence_image.jpg";
-import saarGoldenaura from "@/assets/Golden_Aura_image.jpg";
-import saarKingmyst from "@/assets/King_Mystique_image.jpg";
-import saarOudeternal from "@/assets/Oud_Eternal_image.jpg";
-import saarPulse from "@/assets/Pluse-X_image.jpg";
+import saarBlueedge from "@/assets/Collection/Blue_Edge_image.jpg";
+import saarBlueedge_B from "@/assets/Collection/Blue_Edge_with_box.jpg";
+import saarAmberDrift from "@/assets/Collection/Amber_Drift_image.jpg";
+import saarAmberDrift_B from "@/assets/Collection/Amber_Drift_with_box.jpg";
+import saarAquaImage from "@/assets/Collection/Aqua_Aura_image.jpg";
+import saarAquaImage_B from "@/assets/Collection/Aqua_Aura_with_box.jpg";
+import saarCoolRush from "@/assets/Collection/Cool_Rush_image.jpg";
+import saarCoolRush_B from "@/assets/Collection/Cool_Rush_with_box.jpg";
+import saarStoneedge from "@/assets/Collection/Stone_edge_image.jpg";
+import saarStoneedge_B from "@/assets/Collection/Stone_with_box.jpg";
+import saarFlore from "@/assets/Collection/Flore_Essence_image.jpg";
+import saarFlore_B from "@/assets/Collection/Flore_Essence_with_box.jpg";
+import saarGoldenaura from "@/assets/Collection/Golden_Aura_image.jpg";
+import saarGoldenaura_B from "@/assets/Collection/Golden_Aura_with_box.jpg";
+import saarKingmyst from "@/assets/Collection/King_Mystique_image.jpg";
+import saarKingmyst_B from "@/assets/Collection/king_with_box.jpg";
+import saarOudeternal from "@/assets/Collection/Oud_Eternal_image.jpg";
+import saarOudeternal_B from "@/assets/Collection/Oud_with_box.jpg"
+import saarPulse from "@/assets/Collection/Pulse-X_image.jpg";
+import saarPulse_B from "@/assets/Collection/Pulse-X_with_box.jpg";
+import Back from "@/assets/Box_back.jpg";
+import Reason from "@/assets/Reason.jpg";
 
 export const PRICE_TIERS = {
     premium: {
@@ -26,97 +38,105 @@ export const collections = [
     {
       id: 1,
       name: "Blue Edge",
-      description: "Fresh, Warm and Woody",
+      description: "Best for Office and Evening Wear",
       topNode: "Lemon, Mint, Grapefruit ",
       middleNode: "Ginger, Jasmine",
-      baseNode: "Woody, Sandalwood, Amber",
+      baseNode: "Sandalwood, Amber",
       image: saarBlueedge,
-      detailedImages: [saarBlueedge], // Add more images as needed
+      detailedImages: [saarBlueedge,saarBlueedge_B,Reason,Back], // Add more images as needed
       premium: "yes",
     },
     {
       id: 6,
       name: "Aqua Aura",
-      description: "Fresh, Floral and Musky",
-      topNode: "Lemon, Bergamot, Fresh Notes ",
+      description: "Best for Daily, Summer and Office Wear",
+      topNode: "Lemon, Bergamot",
       middleNode: "Jasmine, Rosemary",
-      baseNode: "Musky, Cedar",
+      baseNode: "Musk, Cedar",
       image: saarAquaImage,
-      detailedImages: [saarAquaImage], // Add more images as needed
+      detailedImages: [saarAquaImage,saarAquaImage_B,Reason,Back], // Add more images as needed
 
     },
     {
       id: 2,
       name: "Golden Aura",
-      description: "Fruity, Spicy and Woody",
-      topNode: "Orange, Grapefruit, Mint",
-      middleNode: "Cinnamon, Spicy, Rose",
-      baseNode: "Woody, Amber, Leathery",
-      image: saarGoldenaura
+      description: "Best for Celebrations and Occasions",
+      topNode: "Citrus, Mint",
+      middleNode: "Cinnamon, Rose",
+      baseNode: "Amber, Leather",
+      image: saarGoldenaura,
+      detailedImages: [saarGoldenaura,saarGoldenaura_B,Reason,Back], // Add more images as needed
     },
     {
       id: 3,
       name: "Oud Eternal",
-      description: "Floral, Earthy and Musky",
+      description: "Best for Special occasions and Evening Wear",
       topNode: "Rose, Saffron",
-      middleNode: "Patchouli, Sweet Caramel",
-      baseNode: "Oud, Musky, Ambery",
+      middleNode: "Patchouli, Caramel",
+      baseNode: "Oud, Musk, Amber",
       image: saarOudeternal,
+      detailedImages: [saarOudeternal,saarOudeternal_B,Reason,Back], // Add more images as needed
       premium: "yes"
     },
     {
       id: 7,
       name: "Cool Rush",
-      description: "Citrus, Spicy and Woody",
-      topNode: "Fresh Citrus, Green Notes",
-      middleNode: "Spicy, Aromatic",
-      baseNode: "Woody, Musky",
-      image: saarColdRush
+      description: "Best for Summer and Daily Wear",
+      topNode: "Fresh Citrus",
+      middleNode: "Aquatic notes",
+      baseNode: "Woody, Musk",
+      image: saarCoolRush,
+      detailedImages: [saarCoolRush,saarCoolRush_B,Reason,Back], // Add more images as needed
     },
     {
       id: 4,
       name: "Pulse-X",
-      description: "Green, Floral and Musky",
+      description: "Best for Casual and Active lifestyle",
       topNode: "Citrus, Green",
-      middleNode: "Spicy, Floral",
-      baseNode: "Woody, Musky",
-      image: saarPulse
+      middleNode: "Spices",
+      baseNode: "Woody, Musk",
+      image: saarPulse,
+      detailedImages: [saarPulse,saarPulse_B,Reason,Back], // Add more images as needed
     },
     {
       id: 5,
       name: "Amber Drift",
-      description: "Warm, Goumand and Amber",
+      description: "Best for Evening and Date nights",
       topNode: "Spicy, Cardamon",
-      middleNode: "Sweet, Creamy, Caramel Accord",
-      baseNode: "Amber, Woody, Vanilla",
-      image: saarAmberDrift
+      middleNode: "Caramel Accord",
+      baseNode: "Amber, Wood, Vanilla",
+      image: saarAmberDrift,
+      detailedImages: [saarAmberDrift,saarAmberDrift_B,Reason,Back], // Add more images as needed
     },
     {
       id: 8,
       name: "Stone Edge",
-      description: "Aquatic, Aromatic and Amber",
-      topNode: "Citrus, Fresh Notes ",
-      middleNode: "Creamy, Sweet",
-      baseNode: "Musky, Ambery",
-      image: saarStoneedge
+      description: "Best for Office and Professional Wear",
+      topNode: "Citrus",
+      middleNode: "Creamy accord",
+      baseNode: "Musky amber",
+      image: saarStoneedge,
+      detailedImages: [saarStoneedge,saarStoneedge_B,Reason,Back], // Add more images as needed
     },
     {
       id: 9,
       name: "King Mystique",
-      description: "Green, Floral and Earthy",
-      topNode: "Bergamot, Sandalwood",
-      middleNode: "Lavender, Cardamom, Cypress",
-      baseNode: "Oud, Leathery, Musky",
+      description: "Best for Night Wear and Signature scent",
+      topNode: "Bergamot",
+      middleNode: "Lavender, Cardamom",
+      baseNode: "Oud, Leather, Musk",
       image: saarKingmyst,
+      detailedImages: [saarKingmyst,saarKingmyst_B,Reason,Back], // Add more images as needed
       premium: "yes"
     },
     {
       id: 10,
       name: "Florė Essence",
-      description: "Citrus, Floral and Woody",
-      topNode: "Peony, Citrus, Orange",
+      description: "Best for Daytime wear and Everyday elegance",
+      topNode: "Peony, Citrus",
       middleNode: "Fruity, Floral, Rose",
-      baseNode: "Woody, Sandalwood, Pink Pepper",
-      image: saarFlore
+      baseNode: "Sandalwood, Soft spice",
+      image: saarFlore,
+      detailedImages: [saarFlore,saarFlore_B,Reason,Back], // Add more images as needed
     }
   ];

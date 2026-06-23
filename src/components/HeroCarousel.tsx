@@ -1,12 +1,17 @@
 import { useEffect, useState, useRef } from "react";
 
-import img4 from "@/assets/FDAY/Hamper.png";
-import img5 from "@/assets/FDAY/H1_C.png";
-import img6 from "@/assets/FDAY/H2_C.png";
-import img7 from "@/assets/FDAY/H3_C.png";
-import img8 from "@/assets/FDAY/H4_C.png";
+import img4 from "@/assets/Main_Page/1_Tradition.png";
+import img6 from "@/assets/Main_Page/3_Reason.png";
+import img5 from "@/assets/Main_Page/2_Notes.png";
+import img7 from "@/assets/Main_Page/4_Discovery.png";
 
-const originalImages = [img4, img5, img6, img7, img8];
+//import img4 from "@/assets/FDAY/Hamper.png";
+//import img5 from "@/assets/FDAY/H1_C.png";
+//import img6 from "@/assets/FDAY/H2_C.png";
+//import img7 from "@/assets/FDAY/H3_C.png";
+//import img8 from "@/assets/FDAY/H4_C.png";
+
+const originalImages = [img4, img5, img6, img7];
 const images = [originalImages[originalImages.length - 1], ...originalImages, originalImages[0]];
 
 const HeroCarousel = () => {

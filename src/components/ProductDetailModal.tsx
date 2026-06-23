@@ -64,7 +64,7 @@ const ProductDetailModal = ({
         </button>
 
         {/* Left Layout Pane: Image Gallery Slider */}
-        <div className="relative bg-[#F9F8F6] h-[32vh] md:h-auto md:aspect-square flex flex-col justify-between group border-b border-gray-100 md:border-b-0">
+        <div className="relative bg-[#F9F8F6] aspect-[3/4] flex flex-col justify-between group border-b border-gray-100 md:border-b-0">
           {product.premium === "yes" && (
             <div className="absolute top-0 left-0 z-20 w-24 h-24 md:w-32 md:h-32 overflow-hidden pointer-events-none">
               <div className="absolute top-[15px] md:top-[22px] left-[-28px] md:left-[-34px] w-[120px] md:w-[160px] rotate-[-45deg] bg-yellow-500 text-black text-[10px] md:text-xs font-black py-1 shadow-md text-center uppercase tracking-wider">
@@ -77,7 +77,7 @@ const ProductDetailModal = ({
             <img 
               src={productImages[currentImageIndex]} 
               alt={`${product.name} visual preview`} 
-              className="w-full h-full object-cover" 
+              className="w-full h-full object-contain p-4" 
             />
 
             {productImages.length > 1 && (
