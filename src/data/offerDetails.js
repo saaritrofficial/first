@@ -14,7 +14,7 @@ export const collectionsjson = [
       baseNode: "Woody, Sandalwood, Amber",
       image: H1,
       oldPrice: "₹1518",
-      newPrice: "₹849",
+      // newPrice: "₹849",
       detailedImages: [H1], // Add more images as needed
     },
     {

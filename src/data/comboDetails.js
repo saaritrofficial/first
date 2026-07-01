@@ -11,7 +11,7 @@ export const comboCollections = [
     combo: true,
     // Custom variants just for this combo
     variants: {
-      "4 x 8ml": { price: "₹1099", launchPrice: "₹679" },
+      "4 x 8ml": {  launchPrice: "₹1099" },
     }
   },
   {
@@ -22,7 +22,7 @@ export const comboCollections = [
     image: saar3mlcombo,
     combo: true,
     variants: {
-      "5 x 3ml": { price: "₹350", launchPrice: "₹250" },
+      "5 x 3ml": { launchPrice: "₹350" },
     }
   }
 

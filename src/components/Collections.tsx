@@ -5,20 +5,20 @@ import { collections } from "../data/ProductDetails";
 
 const PRICE_TIERS = {
   premium: {
-    "8ml (mono)": { price: "₹350", launchPrice: "₹249" },
-    "8ml (box)": { price: "₹450", launchPrice: "₹329" },
-    "30ml (mono)": { price: "₹799", launchPrice: "₹489" },
-    "30ml (box)": { price: "₹899", launchPrice: "₹559" },
-    "50ml": { price: "₹1,249", launchPrice: "₹799" },
-    "60ml": { price: "₹1,549", launchPrice: "₹999" }
+    "8ml (mono)": { launchPrice: "₹249" },
+    "8ml (box)": {  launchPrice: "₹329" },
+    "30ml (mono)": {  launchPrice: "₹489" },
+    "30ml (box)": { launchPrice: "₹559" },
+    "50ml": { launchPrice: "₹799" },
+    "60ml": {launchPrice: "₹999" }
   },
   standard: {
-    "8ml (mono)": { price: "₹299", launchPrice: "₹199" },
-    "8ml (box)": { price: "₹399", launchPrice: "₹279" },
-    "30ml (mono)": { price: "₹699", launchPrice: "₹389" },
-    "30ml (box)": { price: "₹799", launchPrice: "₹459" },
-    "50ml": { price: "₹1,149", launchPrice: "₹699" },
-    "60ml": { price: "₹1,449", launchPrice: "₹899" }
+    "8ml (mono)": {  launchPrice: "₹199" },
+    "8ml (box)": { launchPrice: "₹279" },
+    "30ml (mono)": { launchPrice: "₹389" },
+    "30ml (box)": { launchPrice: "₹459" },
+    "50ml": {launchPrice: "₹699" },
+    "60ml": { launchPrice: "₹899" }
   }
 };
 

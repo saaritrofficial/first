@@ -15,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="mt-[64px]"> {/* Adjust '64px' to match your navbar's height */}
-         <OfferMarquee />
+         {/* <OfferMarquee /> */}
       </div>
       <HeroCarousel />
       {/* <CollectionsOffer/> */}

@@ -23,14 +23,14 @@ import Reason from "@/assets/Reason.jpg";
 
 export const PRICE_TIERS = {
     premium: {
-      "30ml": { price: "₹999", launchPrice: "₹699" },
-      "60ml": { price: "₹1,549", launchPrice: "₹999" },
-      "100ml": { price: "₹2,499", launchPrice: "₹1,899" }
+      "30ml": { launchPrice: "₹699" },
+      "60ml": { launchPrice: "₹999" },
+      "100ml": { launchPrice: "₹1,899" }
     },
     standard: {
-      "30ml": { price: "₹899", launchPrice: "₹599" },
-      "60ml": { price: "₹1,449", launchPrice: "₹899" },
-      "100ml": { price: "₹2,299", launchPrice: "₹1,699" }
+      "30ml": { launchPrice: "₹599" },
+      "60ml": {launchPrice: "₹899" },
+      "100ml": {  launchPrice: "₹1,699" }
     }
   };
 
