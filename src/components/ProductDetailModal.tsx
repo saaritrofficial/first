@@ -214,11 +214,11 @@ const ProductDetailModal = ({
                 <div className="text-xl md:text-2xl font-bold text-[#1B3022]">
                   {formattedTotalPrice}
                 </div>
-                {currentVariant.launchPrice && (
+                {/* {currentVariant.launchPrice && (
                   <span className="text-[9px] md:text-[10px] text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded-full block mt-0.5">
                     Launch discount active
                   </span>
-                )}
+                )} */}
               </div>
             </div>
 
