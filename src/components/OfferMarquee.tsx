@@ -1,7 +1,8 @@
 import React from 'react';
 
 const OfferMarquee = () => {
-  const offerText = "Launch Offer - Upto 40% off | Limited time remains to enjoy exclusive pricing |";
+  const offerText = "Festive Offer - Upto 30% off |";
+ // const offerText = "Launch Offer - Upto 40% off | Limited time remains to enjoy exclusive pricing |";
   //const offerText = "Father's Day Offer | Curated Hamper for celebrations | Limited Time Offer |";
   // Replace this URL with your actual image path (e.g., a flower or gift icon)
   const iconUrl = "https://flaticon.com"; 

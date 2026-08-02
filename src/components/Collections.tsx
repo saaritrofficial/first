@@ -5,20 +5,20 @@ import { collections } from "../data/ProductDetails";
 
 const PRICE_TIERS = {
   premium: {
-    "8ml (mono)": { launchPrice: "₹350" },
-    "8ml (box)": {  launchPrice: "₹450" },
-    "30ml (mono)": {  launchPrice: "₹799" },
-    "30ml (box)": { launchPrice: "₹899" },
-    "50ml": { launchPrice: "₹1249" },
-    "60ml": {launchPrice: "₹1549" }
+    "8ml (mono)": { price: "350" },
+    "8ml (box)": {  price: "450" },
+    "30ml (mono)": {  price: "799" },
+    "30ml (box)": { price: "899" },
+    "50ml": { price: "1249" },
+    "60ml": {price: "1549" }
   },
   standard: {
-    "8ml (mono)": {  launchPrice: "₹299" },
-    "8ml (box)": { launchPrice: "₹399" },
-    "30ml (mono)": { launchPrice: "₹699" },
-    "30ml (box)": { launchPrice: "₹799" },
-    "50ml": {launchPrice: "₹1149" },
-    "60ml": { launchPrice: "₹1449" }
+    "8ml (mono)": {  price: "299" },
+    "8ml (box)": { price: "399" },
+    "30ml (mono)": { price: "699" },
+    "30ml (box)": { price: "799" },
+    "50ml": {price: "1149" },
+    "60ml": { price: "1449" }
   }
 };
 
@@ -26,6 +26,19 @@ const ProductCard = ({ product, index, onCardClick }) => {
   const [selectedSize, setSelectedSize] = useState("60ml");
   const variants = product.premium === "yes" ? PRICE_TIERS.premium : PRICE_TIERS.standard;
   const currentVariant = variants[selectedSize];
+
+   // STEP 2: Dynamically calculate 30% discount and round off to the nearest 10
+   const calculateDiscount = (basePrice) => {
+    const discounted = basePrice * 0.7; // 30% discount
+    const roundedPrice = Math.round(discounted / 10) * 10;
+    
+    return {
+      originalPriceFormatted: `₹${basePrice}`,
+      launchPriceFormatted: `₹${roundedPrice}`
+    };
+  };
+
+  const { originalPriceFormatted, launchPriceFormatted } = calculateDiscount(currentVariant.price);
 
   return (
     <div className="group relative animate-fade-up" style={{ animationDelay: `${index * 0.15}s` }}>
@@ -78,19 +91,14 @@ const ProductCard = ({ product, index, onCardClick }) => {
             ))}
           </select>
 
-          <div className="flex items-baseline gap-1.5 text-base font-semibold">
-            {currentVariant.launchPrice ? (
-              <>
-                <span className="line-through decoration-[#8D7B6D] text-[#8D7B6D] text-xs font-light">
-                  {currentVariant.price}
-                </span>
-                <span className="text-[#1B3022] font-bold">
-                  {currentVariant.launchPrice}
-                </span>
-              </>
-            ) : (
-              <span className="text-[#1A1A1A] font-bold">{currentVariant.price}</span>
-            )}
+           {/* Render both Original price (Strikethrough) and Launch price (Discounted & Rounded) */}
+           <div className="flex items-baseline gap-1.5 text-base font-semibold">
+            <span className="line-through decoration-[#8D7B6D] text-[#8D7B6D] text-xs font-light">
+              {originalPriceFormatted}
+            </span>
+            <span className="text-[#1B3022] font-bold">
+              {launchPriceFormatted}
+            </span>
           </div>
 
           {/* FIXED: Restored functional template tags inside valid URL anchors */}

@@ -5,6 +5,18 @@ const ComboCard = ({ product, index }) => {
   const variantKey = Object.keys(product.variants)[0];
   const variant = product.variants[variantKey];
 
+   // Helper function to calculate 30% discount and round to nearest 10
+   const calculateDiscount = (basePrice) => {
+    const discounted = basePrice * 0.7; // 30% off means paying 70%
+    const roundedPrice = Math.round(discounted / 10) * 10;
+    
+    return {
+      originalPrice: `₹${basePrice}`,
+      launchPrice: `₹${roundedPrice}`
+    };
+  };
+
+  const { originalPrice, launchPrice } = calculateDiscount(variant.price);
   return (
     <div 
       className="group relative bg-white border border-[#BCA994]/20 rounded-sm overflow-hidden flex flex-col md:flex-row animate-fade-up shadow-sm hover:shadow-md transition-shadow duration-500"
@@ -44,16 +56,17 @@ const ComboCard = ({ product, index }) => {
           </div>
         </div>
 
+
         <div className="flex items-center justify-between mt-6 pt-6 border-t border-[#BCA994]/20">
           <div className="flex flex-col">
             <div className="flex items-baseline gap-3">
-              {/* Dark Forest Green for price */}
+              {/* Dark Forest Green for dynamic price */}
               <span className="text-2xl font-serif text-[#1B3022]">
-                {variant.launchPrice}
+                {launchPrice}
               </span>
-              {/* Muted Brown for strikethrough */}
+              {/* Muted Brown for dynamic strikethrough original price */}
               <span className="line-through decoration-[#8D7B6D]/50 text-[#8D7B6D] text-xs font-light">
-                {variant.price}
+                {originalPrice}
               </span>
             </div>
           </div>

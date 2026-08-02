@@ -142,10 +142,12 @@ const CollectionsOffer = () => {
       
       <div className="text-center mb-8 space-y-1">
         <span className="text-[10px] uppercase tracking-[0.25em] text-[#C6A27E] font-bold block animate-fade-down">
-          Fragrance Collections Special
+           Special Festive Collections
+         {/* /*Fragrance Collections Special*/ }
         </span>
         <h2 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] tracking-wide relative inline-block pb-2 animate-fade-up">
-          Father's Day Special
+         Raksha Bandhan Special
+          {/* Father's Day Special */}
           <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-[1px] bg-[#BCA994]/40"></span>
         </h2>
       </div>

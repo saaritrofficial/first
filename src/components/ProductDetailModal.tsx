@@ -29,17 +29,22 @@ const ProductDetailModal = ({
     ? product.detailedImages 
     : [product.image];
 
-  const parsePrice = (priceStr) => {
-    if (!priceStr) return 0;
-    return parseInt(priceStr.replace(/[^0-9]/g, ''), 10);
-  };
 
-  const unitPrice = parsePrice(currentVariant.launchPrice || currentVariant.price);
-  const totalPrice = unitPrice * quantity;
-  const formattedTotalPrice = `₹${totalPrice.toLocaleString('en-IN')}`;
+  // Helper block: Dynamic calculation of 30% discount rounded to nearest 10
+  const baseUnitPrice = currentVariant?.price || 0;
+  const discountedUnitPrice = Math.round((baseUnitPrice * 0.7) / 10) * 10;
+
+  // Compute calculated subtotal totals based on interactive user values
+  const totalOriginalPrice = baseUnitPrice * quantity;
+  const totalLaunchPrice = discountedUnitPrice * quantity;
+
+  // Format currencies with proper string structures
+  const formattedOriginalTotal = `₹${totalOriginalPrice.toLocaleString('en-IN')}`;
+  const formattedLaunchTotal = `₹${totalLaunchPrice.toLocaleString('en-IN')}`;
+
 
   const whatsappMessage = encodeURIComponent(
-    `Hi! I'm interested in buying ${product.name}.\n\nSize: ${selectedSize}\nQuantity: ${quantity}\nTotal Price: ${formattedTotalPrice}\n\nPlease share payment link.`
+    `Hi! I'm interested in buying ${product.name}.\n\nSize: ${selectedSize}\nQuantity: ${quantity}\nTotal Price: ${formattedLaunchTotal}\n\nPlease share payment link.`
   );
 
   const nextImage = () => {
@@ -208,19 +213,28 @@ const ProductDetailModal = ({
             </div>
 
             {/* Dynamic Price Calculations */}
-            <div className="flex items-center justify-between border-t border-gray-100 pt-3 mb-4">
+            <div className="flex items-center justify-between border-t border-gray-100 pt-3 mb-4 text-left">
               <span className="text-xs md:text-sm font-serif text-[#4B3A2F]">Calculated Subtotal:</span>
-              <div className="text-right">
-                <div className="text-xl md:text-2xl font-bold text-[#1B3022]">
-                  {formattedTotalPrice}
-                </div>
-                {/* {currentVariant.launchPrice && (
-                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded-full block mt-0.5">
-                    Launch discount active
+              <div className="text-right flex flex-col items-end">
+                {/* Combined Flex Row container for side-by-side prices */}
+                <div className="flex items-baseline gap-2">
+                  {/* 1. Muted original price with line-through style layout decoration */}
+                  <span className="line-through decoration-[#8D7B6D]/70 text-[#8D7B6D] text-xs font-light">
+                    {formattedOriginalTotal}
                   </span>
-                )} */}
+                  {/* 2. Bold, green discounted price */}
+                  <span className="text-xl md:text-2xl font-bold text-[#1B3022] font-serif">
+                    {formattedLaunchTotal}
+                  </span>
+                </div>
+                
+                {/* Promotional Offer Alert Label Badge */}
+                <span className="text-[9px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full mt-1 tracking-wider uppercase">
+                  30% Special Discount
+                </span>
               </div>
             </div>
+
 
             {/* Checkout Action Button */}
             <a 
