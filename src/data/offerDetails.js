@@ -63,7 +63,35 @@ export const collectionsjson = [
 
 export const collections3json = [
   {
-    id: 1,
+      id: 1,
+      name: "Mint Kahwa with 30ml Saar Itr Hamper",
+      description: "A Gift that Refreshes the Senses and Warms the Heart",
+      topNode: "Lemon, Mint, Grapefruit ",
+      middleNode: "Ginger, Jasmine",
+      baseNode: "Woody, Sandalwood, Amber",
+      image: KH1,
+      //oldPrice: "₹799",
+       newPrice: "₹799",
+      detailedImages: [KH1], // Add more images as needed
+      quantitySelection: 1,
+      //folderForImages: "30ml"
+    },
+    {
+      id: 2,
+      name: "Hibiscus Kahwa/Oolong Kahwa/Blue Kahwa Hamper with 30ml Saar itr Hamper",
+      description: "A Gift of Fragrance and Warmth for your loved ones",
+      topNode: "Lemon, Bergamot, Fresh Notes ",
+      middleNode: "Jasmine, Rosemary",
+      baseNode: "Musky, Cedar",
+      image: KH2,
+      //oldPrice: "₹1499",
+      newPrice: "₹899",
+      detailedImages: [KH2], // Add more images as needed
+      quantitySelection: 1,
+      //folderForImages: "30ml"
+    },
+  {
+    id: 3,
     name: "Sevan Chakra Rakhi with 8ml Saar Itr Hamper",
     description: "Where positive energy meets timeless fragrance",
     topNode: "Lemon, Mint, Grapefruit ",
@@ -77,7 +105,7 @@ export const collections3json = [
     //folderForImages: "30ml"
   },
   {
-    id: 2,
+    id: 4,
     name: "Money & Success Rakhi with 30ml Saar itr Hamper",
     description: "Fragrance wrapped in love. Blessings tied with a Rakhi.",
     topNode: "Lemon, Bergamot, Fresh Notes ",
@@ -91,7 +119,7 @@ export const collections3json = [
     //folderForImages: "30ml"
   },
   {
-    id: 3,
+    id: 5,
     name: "Growth & Success Rakhi with 30ml Saar itr Hamper",
     description: "A little fragrance. A lot of love. And endless wishes for success.",
     topNode: "Lemon, Bergamot, Fresh Notes ",
@@ -105,7 +133,7 @@ export const collections3json = [
     //folderForImages: "30ml"
   },
   {
-    id: 4,
+    id: 6,
     name: "Health, Wealth & Good Luck Rakhi with 50ml Saar itr Hamper",
     description: "Thoughtfully curated,Beautifully packed and Made with Love",
     topNode: "Lemon, Bergamot, Fresh Notes ",
@@ -115,34 +143,6 @@ export const collections3json = [
     //oldPrice: "₹1499",
     newPrice: "₹999",
     detailedImages: [AH4], // Add more images as needed
-    quantitySelection: 1,
-    //folderForImages: "30ml"
-  },
-  {
-    id: 5,
-    name: "Mint Kahwa with 30ml Saar Itr Hamper",
-    description: "A Gift that Refreshes the Senses and Warms the Heart",
-    topNode: "Lemon, Mint, Grapefruit ",
-    middleNode: "Ginger, Jasmine",
-    baseNode: "Woody, Sandalwood, Amber",
-    image: KH1,
-    //oldPrice: "₹799",
-     newPrice: "₹799",
-    detailedImages: [KH1], // Add more images as needed
-    quantitySelection: 1,
-    //folderForImages: "30ml"
-  },
-  {
-    id: 6,
-    name: "Hibiscus Kahwa/Oolong Kahwa/Blue Kahwa Hamper with 30ml Saar itr Hamper",
-    description: "A Gift of Fragrance and Warmth for your loved ones",
-    topNode: "Lemon, Bergamot, Fresh Notes ",
-    middleNode: "Jasmine, Rosemary",
-    baseNode: "Musky, Cedar",
-    image: KH2,
-    //oldPrice: "₹1499",
-    newPrice: "₹899",
-    detailedImages: [KH2], // Add more images as needed
     quantitySelection: 1,
     //folderForImages: "30ml"
   }
