@@ -22,7 +22,7 @@ export const comboCollections = [
     image: saar3mlcombo,
     combo: true,
     variants: {
-      "5 x 3ml": { price: "350", newPrice: "249" },
+      "5 x 3ml": { price: "349", newPrice: "249" },
     }
   }
 

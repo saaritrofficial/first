@@ -5,9 +5,9 @@ import { collections } from "../data/ProductDetails";
 
 const PRICE_TIERS = {
   premium: {
-    "8ml (mono)": { price: "350" },
-    "8ml (box)": {  price: "450" },
-    "30ml (mono)": {  price: "799" },
+    "8ml (mono)": { price: "349" },
+    "8ml (box)": {  price: "449" },
+    "30ml (mono)": {  price: "749" },
     "30ml (box)": { price: "899" },
     "50ml": { price: "1249" },
     "60ml": {price: "1549" }
@@ -16,25 +16,25 @@ const PRICE_TIERS = {
     "8ml (mono)": {  price: "299" },
     "8ml (box)": { price: "399" },
     "30ml (mono)": { price: "699" },
-    "30ml (box)": { price: "799" },
+    "30ml (box)": { price: "849" },
     "50ml": {price: "1149" },
     "60ml": { price: "1449" }
   },
   premiumOffer: {
-    "8ml (mono)": { price: "300" },
-    "8ml (box)": {  price: "400" },
-    "30ml (mono)": {  price: "700" },
-    "30ml (box)": { price: "800" },
-    "50ml": { price: "1200" },
-    "60ml": {price: "1500" }
+    "8ml (mono)": { price: "299" },
+    "8ml (box)": {  price: "399" },
+    "30ml (mono)": {  price: "549" },
+    "30ml (box)": { price: "649" },
+    "50ml": { price: "949" },
+    "60ml": {price: "1149" }
   },
   standardOffer: {
-    "8ml (mono)": {  price: "200" },
-    "8ml (box)": { price: "300" },
-    "30ml (mono)": { price: "600" },
-    "30ml (box)": { price: "700" },
-    "50ml": {price: "1100" },
-    "60ml": { price: "1400" }
+    "8ml (mono)": {  price: "249" },
+    "8ml (box)": { price: "349" },
+    "30ml (mono)": { price: "499" },
+    "30ml (box)": { price: "599" },
+    "50ml": {price: "849" },
+    "60ml": { price: "1049" }
   }
 };
 
