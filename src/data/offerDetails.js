@@ -8,6 +8,15 @@ import F1 from "@/assets/RBandhan/Combo_sister.jpeg"
 import F2 from "@/assets/RBandhan/Combo_Bhaiya_Bhabhi.jpeg"
 import F3 from "@/assets/RBandhan/Combo_8ml.jpeg"
 
+import AH1 from "@/assets/Rakhi_Hamper/Aura_Hamper_499.jpeg"
+import AH2 from "@/assets/Rakhi_Hamper/Aura_Hamper_799_1.jpeg"
+import AH3 from "@/assets/Rakhi_Hamper/Aura_Hamper_799_2.jpeg"
+import AH4 from "@/assets/Rakhi_Hamper/Aura_Hamper_999.jpeg"
+
+import KH1 from "@/assets/Rakhi_Hamper/Kahwa_Hamper_799.jpeg"
+import KH2 from "@/assets/Rakhi_Hamper/Kahwa_Hamper_899.jpeg"
+
+
 export const collectionsjson = [
   {
     id: 1,
@@ -20,6 +29,8 @@ export const collectionsjson = [
     oldPrice: "₹799",
      newPrice: "₹449",
     detailedImages: [F1], // Add more images as needed
+    quantitySelection: 1,
+    folderForImages: "30ml"
   },
   {
     id: 2,
@@ -32,7 +43,8 @@ export const collectionsjson = [
     oldPrice: "₹1499",
     newPrice: "₹899",
     detailedImages: [F2], // Add more images as needed
-
+    quantitySelection: 2,
+    folderForImages: "30ml"
   },
   {
     id: 3,
@@ -43,7 +55,96 @@ export const collectionsjson = [
     baseNode: "Woody, Amber, Leathery",
     oldPrice: "₹1099",
     newPrice: "₹649",
-    image: F3
+    image: F3,
+    quantitySelection: 3,
+    folderForImages: "30ml"
+  }
+]
+
+export const collections3json = [
+  {
+    id: 1,
+    name: "Sevan Chakra Rakhi with 8ml Saar Itr Hamper",
+    description: "Where positive energy meets timeless fragrance",
+    topNode: "Lemon, Mint, Grapefruit ",
+    middleNode: "Ginger, Jasmine",
+    baseNode: "Woody, Sandalwood, Amber",
+    image: AH1,
+    //oldPrice: "₹799",
+     newPrice: "₹499",
+    detailedImages: [AH1], // Add more images as needed
+    quantitySelection: 1,
+    //folderForImages: "30ml"
+  },
+  {
+    id: 2,
+    name: "Money & Success Rakhi with 30ml Saar itr Hamper",
+    description: "Fragrance wrapped in love. Blessings tied with a Rakhi.",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
+    image: AH2,
+    //oldPrice: "₹1499",
+    newPrice: "₹799",
+    detailedImages: [AH2], // Add more images as needed
+    quantitySelection: 1,
+    //folderForImages: "30ml"
+  },
+  {
+    id: 3,
+    name: "Growth & Success Rakhi with 30ml Saar itr Hamper",
+    description: "A little fragrance. A lot of love. And endless wishes for success.",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
+    image: AH3,
+    //oldPrice: "₹1499",
+    newPrice: "₹799",
+    detailedImages: [AH3], // Add more images as needed
+    quantitySelection: 1,
+    //folderForImages: "30ml"
+  },
+  {
+    id: 4,
+    name: "Health, Wealth & Good Luck Rakhi with 50ml Saar itr Hamper",
+    description: "Thoughtfully curated,Beautifully packed and Made with Love",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
+    image: AH4,
+    //oldPrice: "₹1499",
+    newPrice: "₹999",
+    detailedImages: [AH4], // Add more images as needed
+    quantitySelection: 1,
+    //folderForImages: "30ml"
+  },
+  {
+    id: 5,
+    name: "Mint Kahwa with 30ml Saar Itr Hamper",
+    description: "A Gift that Refreshes the Senses and Warms the Heart",
+    topNode: "Lemon, Mint, Grapefruit ",
+    middleNode: "Ginger, Jasmine",
+    baseNode: "Woody, Sandalwood, Amber",
+    image: KH1,
+    //oldPrice: "₹799",
+     newPrice: "₹799",
+    detailedImages: [KH1], // Add more images as needed
+    quantitySelection: 1,
+    //folderForImages: "30ml"
+  },
+  {
+    id: 6,
+    name: "Hibiscus Kahwa/Oolong Kahwa/Blue Kahwa Hamper with 30ml Saar itr Hamper",
+    description: "A Gift of Fragrance and Warmth for your loved ones",
+    topNode: "Lemon, Bergamot, Fresh Notes ",
+    middleNode: "Jasmine, Rosemary",
+    baseNode: "Musky, Cedar",
+    image: KH2,
+    //oldPrice: "₹1499",
+    newPrice: "₹899",
+    detailedImages: [KH2], // Add more images as needed
+    quantitySelection: 1,
+    //folderForImages: "30ml"
   }
 ]
 

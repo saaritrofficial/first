@@ -19,26 +19,48 @@ const PRICE_TIERS = {
     "30ml (box)": { price: "799" },
     "50ml": {price: "1149" },
     "60ml": { price: "1449" }
+  },
+  premiumOffer: {
+    "8ml (mono)": { price: "300" },
+    "8ml (box)": {  price: "400" },
+    "30ml (mono)": {  price: "700" },
+    "30ml (box)": { price: "800" },
+    "50ml": { price: "1200" },
+    "60ml": {price: "1500" }
+  },
+  standardOffer: {
+    "8ml (mono)": {  price: "200" },
+    "8ml (box)": { price: "300" },
+    "30ml (mono)": { price: "600" },
+    "30ml (box)": { price: "700" },
+    "50ml": {price: "1100" },
+    "60ml": { price: "1400" }
   }
 };
 
 const ProductCard = ({ product, index, onCardClick }) => {
-  const [selectedSize, setSelectedSize] = useState("60ml");
-  const variants = product.premium === "yes" ? PRICE_TIERS.premium : PRICE_TIERS.standard;
-  const currentVariant = variants[selectedSize];
+  const [selectedSize, setSelectedSize] = useState("8ml (mono)");
 
-   // STEP 2: Dynamically calculate 30% discount and round off to the nearest 10
-   const calculateDiscount = (basePrice) => {
-    const discounted = basePrice * 0.7; // 30% discount
-    const roundedPrice = Math.round(discounted / 10) * 10;
+  // Determine standard vs premium base price tier
+  const isPremium = product.premium === "yes";
+  const baseTier = isPremium ? PRICE_TIERS.premium : PRICE_TIERS.standard;
+  const offerTier = isPremium ? PRICE_TIERS.premiumOffer : PRICE_TIERS.standardOffer;
+
+  const variants = baseTier;
+
+  // Fetch prices for the selected size mapping
+  const originalPrice = baseTier[selectedSize]?.price || "0";
+  const offerPrice = offerTier[selectedSize]?.price || "0";
+
+  const originalPriceFormatted = `₹${originalPrice}`;
+  const launchPriceFormatted = `₹${offerPrice}`;
     
-    return {
-      originalPriceFormatted: `₹${basePrice}`,
-      launchPriceFormatted: `₹${roundedPrice}`
-    };
-  };
+    // return {
+    //   originalPriceFormatted: `₹${originalPriceFormatted}`,
+    //   launchPriceFormatted: `₹${launchPriceFormatted}`
+    // };
+  
 
-  const { originalPriceFormatted, launchPriceFormatted } = calculateDiscount(currentVariant.price);
 
   return (
     <div className="group relative animate-fade-up" style={{ animationDelay: `${index * 0.15}s` }}>
@@ -104,7 +126,7 @@ const ProductCard = ({ product, index, onCardClick }) => {
           {/* FIXED: Restored functional template tags inside valid URL anchors */}
           <a 
               href={`https://wa.me/919625663589?text=${encodeURIComponent(
-                `Hi! I'm interested in ${product.name}.\n\nSize: ${selectedSize}\nPrice: ${currentVariant.launchPrice || currentVariant.price}\n\nPlease provide more information.`
+                `Hi! I'm interested in ${product.name}.\n\nSize: ${selectedSize}\nPrice: ${offerPrice}\n\nPlease provide more information.`
               )}`}  
             target="_blank" 
             rel="noopener noreferrer" 

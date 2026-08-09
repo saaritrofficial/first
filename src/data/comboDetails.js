@@ -11,7 +11,7 @@ export const comboCollections = [
     combo: true,
     // Custom variants just for this combo
     variants: {
-      "4 x 8ml": {  price: "1300" },
+      "4 x 8ml": {  price: "1099", newPrice: "1000" },
     }
   },
   {
@@ -22,7 +22,7 @@ export const comboCollections = [
     image: saar3mlcombo,
     combo: true,
     variants: {
-      "5 x 3ml": { price: "350" },
+      "5 x 3ml": { price: "350", newPrice: "300" },
     }
   }
 
