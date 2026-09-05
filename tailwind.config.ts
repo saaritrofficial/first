@@ -118,7 +118,7 @@ export default {
         shimmer: "shimmer 3s ease-in-out infinite",
         "fade-up": "fadeUp 0.8s ease-out forwards",
         "fade-in": "fadeIn 1s ease-out forwards",
-        marquee: 'marquee 25s linear infinite',
+        marquee: 'marquee 50s linear infinite',
 
       },
     },
